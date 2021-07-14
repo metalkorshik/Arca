@@ -1,0 +1,34 @@
+.user-panel
+    .container
+        .user-panel__inner
+            .user-panel__title Личный кабинет
+            a(href="#").button.user-panel__notes-link Заметки
+.personal-area
+    .container
+        .personal-area__inner
+            .personal-area__photo-img
+                img(src="../../src/blocks/personal-area/assets/img/person-1.png").personal-area__image#imgOutput
+                .personal-area__download-box
+                    input(type="file").personal-area__download-file#imgInput
+                    button.button.personal-area__add-photo Добавить фото
+            .personal-area__container
+                .personal-area__item.personal-area__item--mb
+                    .personal-area__label ФИО
+                    input(type="text" maxlength="50").input-styled.personal-area__input
+                .personal-area__row
+                    .personal-area__item.personal-area__item--mr
+                        .personal-area__label Телефон
+                        input(type="phone").input-styled.personal-area__input.js-phone
+                    .personal-area__item
+                        .personal-area__label E-mail
+                        input(type="email").input-styled.personal-area__input
+
+                .personal-area__passwords
+                    .personal-area__item.personal-area__item--mr
+                        .personal-area__label Старый пароль
+                        input(type="password").input-styled.personal-area__input
+                    .personal-area__item
+                        .personal-area__label Новый пароль
+                        input(type="password").input-styled.personal-area__input
+
+                button.button.personal-area__btn-change Обновить

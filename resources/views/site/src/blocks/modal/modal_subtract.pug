@@ -1,0 +1,24 @@
+.modal.modal-subtract
+    .modal__content
+        .modal__close
+            img(src="src/blocks/modal/assets/img/close.svg")
+        .modal__subtract
+            .modal__header.modal__header--small Вычитать
+            .modal__subtract-inner
+
+                .modal__subtract-value
+                    .modal__subtract-button.minus
+                        img(src="src/blocks/modal/assets/img/minus.svg")
+                    input(type="text" value="1000").modal__subtract-input#input-subtract
+                    .modal__subtract-currency &#8381;
+                    .modal__subtract-button.plus
+                        img(src="src/blocks/modal/assets/img/plus-grey.svg")
+
+                .modal__range-box
+                    input(type="text"
+                        data-min="0"
+                        data-max="10000"
+                        data-from="1000"
+                        ).modal__range-slider#slider-subtract
+
+                a(href="#").button.modal__save-button Вычитать

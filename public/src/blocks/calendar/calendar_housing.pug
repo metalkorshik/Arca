@@ -1,0 +1,40 @@
+.calendar
+    .calendar__title Место и Дата
+    .calendar__housing
+        .calendar__box
+            .modal__label Квартира
+            .calendar__flat-box
+                select.js-select-flat
+                    option Генерала Ермолова ул, 12
+                    option Генерала Ермолова ул, 12
+                    option Генерала Ермолова ул, 12
+        .calendar__box
+            .calendar__box-dates
+                .calendar__dates-container.calendar__dates-container--center-border
+                    .modal__label Въезд
+                    input(type="text" value="15 сент." ).calendar__date.calendar__date--right#from
+                .calendar__dates-container
+                    .modal__label.modal__label--date-left Выезд
+                    input(type="text" value="1 окт.").calendar__date.calendar__date--left#to
+
+    a(href="#").button.calendar__save-btn Сохранить
+
+    .calendar__title Расходы
+    .calendar__expenses
+
+        .calendar__costs-box
+            .calendar__costs-item
+                .calendar__costs-headtitle
+                    .calendar__costs-status
+                    .calendar__costs-title Доходы (80%)
+
+                .calendar__costs-value.calendar__costs-value--green 50 000 руб.
+            .calendar__costs-item
+                .calendar__costs-headtitle
+                    .calendar__costs-status.calendar__costs-status--black
+                    .calendar__costs-title Расходы (20%)
+
+                .calendar__costs-value -10 000 руб
+
+        figure.highcharts-figure
+            #container2

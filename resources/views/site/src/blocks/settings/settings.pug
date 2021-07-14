@@ -1,0 +1,28 @@
+.user-panel
+    .container
+        .user-panel__inner
+            .user-panel__title Настройки CRM
+.settings
+    .container
+        .settings__inner
+            .settings__row
+                .settings__col
+                    .settings__text За сколько дней до, предупредить о том, что уведомление будет просрочено
+                .settings__col
+                    .settings__block
+                        input(type="number").input-styled.settings__input.js-valid-area
+                        .settings__text дней
+
+            .settings__row
+                .settings__col
+                    .settings__text Отправлять на email отвественного по проекту письмо, в случае если табель за неделю не был заполнен
+                .settings__col
+                    .settings__block
+                        .checkbox
+                            input(type="checkbox" min="0").checkbox__input-checkbox
+                            .checkbox__square
+                            .settings__text.settings__checkbox-text отправлять
+
+
+        button.button.settings__button Сохранить
+

@@ -1,0 +1,133 @@
+.modal.modal-employee-card
+    .modal__content
+        .modal__close
+            img(src="src/blocks/modal/assets/img/close.svg")
+        .modal__employee-card
+            .modal__title Карточка сотрудника
+            .modal__tabs
+                .modal__tab-item.modal__tab-item--active Персональная информация
+                .modal__tab-item Календарь
+                .modal__tab-item Другое
+
+            .modal__employee-inner.modal__employee-inner--active
+                .modal__employee-box
+                    .modal__employee-preview
+                        img(src="src/blocks/modal/assets/img/person-1.png" accept=".png,.jpeg,.jpg").modal__employee-photo#imgOutput
+                        .modal__employee-download
+                            input(type="file").modal__download-file#imgInput
+                            a(href="#").modal__add-photo Добавить фото
+
+                    .modal__container
+                        .modal__named-row
+                            .modal__status Монтажник
+                            .modal__edit-icon
+
+                        .modal__profile-row
+                            .modal__input-box.modal__input-box--mr
+                                .modal__label.modal__label--light-grey ФИО
+                                .modal__input-container
+                                    input(type="text" value="Шахбазаян Денис Арменович" disabled maxlength="50").modal__input.modal__input--mb-none.modal__input-name.modal__input-edit
+                                    .modal__edit-icon.modal__edit-icon--position
+
+                            .modal__input-box
+                                .modal__label.modal__label--light-grey Дата рождения
+                                .modal__input-container
+                                    input(type="text" value="01/01/1990" disabled).modal__input.modal__input--mb-none.modal__input-born.modal__input-edit.js-date
+                                    .modal__edit-icon.modal__edit-icon--position
+
+                        .modal__profile-row
+                            .modal__input-box.modal__input-box--mr
+                                .modal__label.modal__label--light-grey Ставка
+                                .modal__input-container
+                                    input(type="number" disabled min="0.01" step="0.01").modal__input.modal__input--mb-none.modal__input-rate.modal__input-edit.js-valid-area
+                                    .modal__edit-icon.modal__edit-icon--position
+
+                            .modal__input-box
+                                .modal__label.modal__label--light-grey E-mail
+                                .modal__input-container
+                                    input(type="text" value="Arca@gmail.com" disabled).modal__input.modal__input--mb-none.modal__input-email.modal__input-edit
+                                    .modal__edit-icon.modal__edit-icon--position
+
+                        .modal__profile-row
+                            .modal__input-box.modal__input-box--mr
+                                .modal__label.modal__label--light-grey Телефон
+                                .modal__input-container
+                                    input(type="text" value="+7 945 000 00 00" disabled).modal__input.modal__input--mb-none.modal__input-phone.modal__input-edit.js-phone
+                                    .modal__edit-icon.modal__edit-icon--position
+
+
+                        .modal__parameters
+                            .modal__parameters-item
+                                .modal__label.modal__label--light-grey Размер одежды
+                                .modal__parameters-info
+                                    input(type="text" value="L" maxlength="5" disabled ).modal__parameters-text.modal__parameters-text--width-size.modal__input-edit
+                                    .modal__edit-icon
+
+                            .modal__parameters-item
+                                .modal__label.modal__label--light-grey Рост:
+                                .modal__parameters-info
+                                    input(type="number" value="175" min="0" max="999" disabled).modal__parameters-text.modal__input-edit.js-valid-area.js-input-height
+                                    .modal__edit-icon
+
+                            .modal__parameters-item
+                                .modal__label.modal__label--light-grey Размер обуви:
+                                .modal__parameters-info
+                                    input(type="number" min="0" max="99" value="42" disabled).modal__parameters-text.modal__parameters-text--width-small.modal__input-edit.js-valid-area.js-input-shoes
+                                    .modal__edit-icon
+
+                        .modal__passport-title Паспорт
+
+                        .modal__profile-row.modal__profile-row--mobile-row
+
+                            .modal__input-box.modal__box-series.modal__input-box--mr
+                                .modal__label.modal__label--light-grey Серия
+                                input(type="password" min="0" maxlength="4" value="3222" disabled).modal__input-pass.modal__input.modal__input--mb-none.modal__input-series#password-input.js-edit-input.js-valid-area
+                            .modal__input-box
+                                .modal__label.modal__label--light-grey Номер
+                                .modal__input-container
+                                    input(type="password" value="123213" min="0" maxlength="6" disabled).modal__input-pass.modal__input.modal__input--mb-none.modal__input-number.js-edit-input.js-valid-area
+                                    .modal__edit-icon.js-edit-pass
+                                    .modal__pass-box
+                                        .modal__show-icon
+                                        .modal__hidden-icon
+
+                .modal__container
+                    .modal__label Всего отработано часов:
+                    .modal__graphic
+                        .js-ring-chart-wrapper
+                            .js-ring-chart-tooltip
+                            .js-ring-chart-box
+                                figure.highcharts-figure
+                                    .js-ring-chart(data-rings='[ { "today": { "real": 6, "goal": 8 }, "week": { "real": 11, "goal": 40 }, "month": { "real": 50, "goal": 70 } } ]')
+                    .modal__activity
+                        .modal__activity-item
+                            .modal__activity-status
+                            .modal__activity-title
+                                | Отработал часов
+                                span  сегодня
+                        .modal__timer
+                            span.modal__timer-text.modal__timer-text--green.js-today
+                            |  из 8
+
+                        .modal__activity-item
+                            .modal__activity-status.modal__activity-status--black
+                            .modal__activity-title
+                                | Отработал часов
+                                span  на этой неделе
+                        .modal__timer
+                            span.modal__timer-text.modal__timer-text--green.js-week
+                            |  из 40
+
+                        .modal__activity-item
+                            .modal__activity-status.modal__activity-status--green
+                            .modal__activity-title
+                                | Отработал часов
+                                span  в этом месяце
+                        .modal__timer
+                            span.modal__timer-text.modal__timer-text--red.js-month
+                            |  из 70
+
+            .modal__employee-inner
+                include ../calendar/calendar
+            .modal__employee-inner
+                include ../calendar/calendar_housing

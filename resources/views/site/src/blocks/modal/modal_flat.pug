@@ -1,0 +1,22 @@
+.modal.modal-flat
+    .modal__content
+        .modal__close
+            img(src="src/blocks/modal/assets/img/close.svg")
+        .modal__flat
+            img(src="src/blocks/modal/assets/img/apartment.png").modal__flat-img
+            .modal__header.modal__header--flat Добавить квартиру
+            .modal__flat-inner
+                .modal__address
+                    .modal__label Адрес квартиры
+                    input.modal__input(value="Генерала Ермолова ул, 12")
+
+                .modal__flat-total
+                    .modal__label Итого:
+                    .modal__input-box
+                        .modal__wallet
+                            img(src="src/blocks/modal/assets/img/wallet.svg")
+                        input(type="text" value="1 250 963  ").modal__input.modal__input--mb-none.modal__input--pl.modal__input--background-focus
+                        .modal__icon-rub
+
+                a(href="#").button Сохранить
+

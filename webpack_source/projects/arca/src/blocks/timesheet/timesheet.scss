@@ -1,0 +1,158 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.timesheet{
+  padding: 27px 0 70px 0;
+  &__header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    width: 1270px;
+  }
+  &__row{
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 1270px;
+  }
+  &__number{
+    width: 28px;
+  }
+  &__fullname{
+    width: 156px;
+  }
+  &__rate{
+    width: 47px;
+  }
+  &__position{
+    width: 28px;
+  }
+  &__hours{
+    width: 48px;
+  }
+  &__days{
+    width: 32px;
+  }
+  &__business{
+    width: 115px;
+  }
+  &__text{
+    font-size: 11.3px;
+    line-height: 16px;
+    color: #A4AEB9;
+    text-transform: uppercase;
+    text-align: center;
+    &--name{
+      text-align: start;
+      padding-left: 8px;
+    }
+    &--days{
+      margin-right: 2px;
+    }
+  }
+  &__table-text{
+    font-size: 12px;
+    line-height: 16px;
+    color: #4B5561;
+    &--name{
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+  &__cell{
+    flex-shrink: 0;
+    border: 1px solid #E9EEF3;
+    overflow: auto;
+    @include flex-row-center;
+    height: 46px;
+    &--name{
+      padding-left: 8px;
+      justify-content: flex-start;
+      border-color: #c3e1f6;
+      transition: .2s;
+      cursor: pointer;
+      &:hover{
+        border-color: #4ab5fd;
+      }
+    }
+    &--disabled{
+      background: #F2F4F6;
+    }
+    &--active{
+      background: #BCC5D0;
+      .timesheet__table-text{
+        color: #fff;
+      }
+    }
+    &--view{
+      transition: .2s;
+      border-color: #c3e1f6;
+      &:hover{
+        border-color: #4ab5fd;
+      }
+    }
+  }
+  &__info{
+    border-bottom: 1px solid #EFF2F6;
+    padding-bottom: 4px;
+    margin-top: 13px;
+  }
+  &__info-block{
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+  }
+  &__info-text{
+    font-size: 12px;
+    line-height: 16px;
+    color: #A4AEB9;
+    text-transform: uppercase;
+    &--mr{
+      margin-right: 56px;
+    }
+  }
+  &__total{
+    padding-top: 7px;
+    border-top: 1px solid #EFF2F6;
+    margin-top: 23px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__items {
+    margin-bottom: 30px;
+  }
+  &__years{
+    width: 300px;
+  }
+  &__dates {
+    margin-left: 20px;
+    margin-bottom: 0;
+  }
+  &__total-text{
+    margin-right: 24px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #4B5561;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__wrapper{
+    overflow: hidden;
+  }
+  &__scroll{
+    overflow: auto;
+  }
+  &__comment-cell{
+    cursor: pointer;
+    background-color: #8fc8fd;
+    border-color: #8fc8fd;
+    .timesheet__table-text{
+      color: #fff;
+    }
+  }
+
+}

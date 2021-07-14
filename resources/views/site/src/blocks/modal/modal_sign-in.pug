@@ -1,0 +1,20 @@
+.modal.modal-sign
+    .modal__content
+        .modal__inner
+            .modal__close
+                img(src="src/blocks/modal/assets/img/close.svg")
+            .modal__sign-in
+                .modal__logo
+                    include ../logo/logo
+                .modal__sign-in-container
+                    .modal__title  Вход
+                    form
+                        .modal__form-inner
+                            .modal__label Логин
+                            input(type="text").modal__input
+                            .modal__label Пароль
+                            .modal__input-box
+                                input(type="password").modal__input.modal__input-password
+                                .modal__pass-icon
+                        a(href="#").modal__pass-link Забыли пароль?
+                        button.button.button--width.modal__button Войти

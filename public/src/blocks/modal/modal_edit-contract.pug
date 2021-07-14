@@ -1,0 +1,27 @@
+.modal.modal-edit
+    .modal__content
+        .modal__close
+            img(src="src/blocks/modal/assets/img/close.svg")
+        .modal__edit-contract
+            .modal__header Редактирование
+            .modal__inner-content
+                .modal__label Заказчик
+                input(type="text").modal__input.modal__input--padding.modal__input--mb
+                .modal__row
+                    .modal__information-box
+                        .modal__label № Контракта
+                        input(type="text").modal__input.modal__input--padding.modal__input--mb-none
+                    .modal__information-box.modal__information-box--width
+                        .modal__label Дата
+                        input(type="text").modal__input.modal__input--padding.modal__input--mb-none.js-date
+                .modal__label Ответственный заказчик
+                input(type="text").modal__input.modal__input--padding.modal__input--mb
+                .modal__block-total
+                    .modal__total
+                        .modal__label Итого:
+                        .modal__input-box
+                            .modal__wallet
+                                img(src="src/blocks/modal/assets/img/wallet.svg")
+                            input(type="text").modal__input.modal__input--mb-none.modal__input--pl.modal__input--background-focus
+                            .modal__icon-rub
+                    a(href="#").button.modal__save-button Сохранить

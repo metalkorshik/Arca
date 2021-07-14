@@ -1,0 +1,23 @@
+.modal.modal--index.modal-consumption
+    .modal__content
+        .modal__close
+            img(src="src/blocks/modal/assets/img/close.svg")
+        .modal__consumption
+            .modal__header Добавить расход
+            .modal__consumption-inner
+                form
+                    .modal__label Названия расхода
+                    input(type="number" min='0,01' placeholder='Номер').modal__input.modal__input--padding.js-valid-area
+                    .modal__label Заложенной суммы
+                    input(type="number" min='0,01' placeholder='Номер').modal__input.modal__input--padding.js-valid-area
+                    .modal__label Израсходовано
+                    input(type="number" min='0,01' placeholder='Номер').modal__input.modal__input--padding.js-valid-area
+                    .modal__label Номер счёта
+                    input(type="text"  min='0' placeholder='Номер' maxlength="50").modal__input.modal__input--padding
+                    .modal__label Номер контрагента
+                    input(type="text" min='0' placeholder='Номер' maxlength="50").modal__input.modal__input--padding
+                    .modal__label Номер номенклатуры
+                    input(type="text"  min='0' placeholder='Номер' maxlength="50").modal__input.modal__input--padding
+                    .modal__label Дата
+                    input(type="text"  min='0' placeholder='Дата' maxlength="50").modal__input.modal__input-date.modal__input--padding.js-date#todayInputDate
+                    button.button.modal__btn-consumption Добавить

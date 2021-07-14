@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заметки</title>
+  <link href="libs.css" rel="stylesheet"><link href="style.css" rel="stylesheet"></head>
+  <body>
+<header class="header">
+  <div class="container">
+    <div class="header__inner"><a class="header__logo" href="#"><img class="logo" src="src/blocks/logo/assets/img/logo.svg"></a>
+      <nav class="header__nav">
+        <div class="header__links"><a class="header__link header__link--active" href="#">
+            <div class="header__link-icon"><img src="src/blocks/header/assets/img/home.svg"></div>Главная</a><a class="header__link" href="#">
+            <div class="header__link-icon"><img src="src/blocks/header/assets/img/word.svg"></div>Контракты</a><a class="header__link" href="#">
+            <div class="header__link-icon"><img src="src/blocks/header/assets/img/personal.svg"></div>Персонал</a><a class="header__link" href="#">
+            <div class="header__link-icon"><img src="src/blocks/header/assets/img/tab.svg"></div>Табель</a><a class="header__link" href="#">
+            <div class="header__link-icon"><img src="src/blocks/header/assets/img/dots.svg"></div>Квартиры</a></div>
+      </nav>
+      <div class="header__user">
+        <div class="header__user-info"><a class="header__name" href="#">Имя Фамилия</a>
+          <div class="header__position">Суперадмин</div>
+        </div><a class="header__user-img" href="#"><img class="header__user-photo" src="src/blocks/header/assets/img/user.png"></a>
+        <div class="header__menu-container"><a class="header__menu" href="#"></a>
+          <div class="header__menu-list"><a class="header__link header__link--active" href="#">
+              <div class="header__link-icon"><img src="src/blocks/header/assets/img/home.svg"></div>Главная</a><a class="header__link" href="#">
+              <div class="header__link-icon"><img src="src/blocks/header/assets/img/word.svg"></div>Контракты</a><a class="header__link" href="#">
+              <div class="header__link-icon"><img src="src/blocks/header/assets/img/personal.svg"></div>Персонал</a><a class="header__link" href="#">
+              <div class="header__link-icon"><img src="src/blocks/header/assets/img/tab.svg"></div>Табель</a><a class="header__link" href="#">
+              <div class="header__link-icon"><img src="src/blocks/header/assets/img/dots.svg"></div>Квартиры</a></div>
+        </div>
+        <div class="header__notification-box">
+          <div class="header__notification-icon"></div>
+          <div class="header__notification">1</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="user-panel">
+  <div class="container">
+    <div class="user-panel__inner">
+      <div class="user-panel__title">Заметки</div>
+    </div>
+  </div>
+</div>
+<div class="notes">
+  <div class="container">
+    <button class="button notes__add-btn">Добавить</button>
+    <div class="notes__grid" id="outputNotes">
+      <div class="notes__item">
+        <div class="notes__box">
+          <textarea class="notes__text" placeholder="Введите текст">Многострочный текст Многострочный текст  Многострочный текст 31321312312312312312312321 1</textarea>
+          <div class="notes__bottom">
+            <div class="notes__date">Создано: <span>12/04/2015</span></div>
+            <div class="notes__date">Отредактировано: <span>12/04/2015</span></div>
+          </div>
+        </div>
+        <div class="notes__icons">
+          <div class="notes__close"></div>
+        </div>
+      </div>
+      <div class="notes__item">
+        <div class="notes__box">
+          <textarea class="notes__text" placeholder="Введите текст">Многострочный текст Многострочный текст  Многострочный текст 31321312312312312312312321 2</textarea>
+          <div class="notes__bottom">
+            <div class="notes__date">Создано: 12/04/2015</div>
+            <div class="notes__date">Отредактировано: 12/04/2015</div>
+          </div>
+        </div>
+        <div class="notes__icons">
+          <div class="notes__close"></div>
+        </div>
+      </div>
+      <div class="notes__item">
+        <div class="notes__box">
+          <textarea class="notes__text" placeholder="Введите текст">Многострочный текст Многострочный текст  Многострочный текст 31321312312312312312312321 3</textarea>
+          <div class="notes__bottom">
+            <div class="notes__date">Создано: 12/04/2015</div>
+            <div class="notes__date">Отредактировано: 12/04/2015</div>
+          </div>
+        </div>
+        <div class="notes__icons">
+          <div class="notes__close"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__rights">
+        <div class="footer__text">© 2020</div>
+      </div>
+      <div class="footer__nav"><a class="footer__link" href="#">Главная</a><a class="footer__link" href="#">Контракты</a><a class="footer__link" href="#">Персонал</a><a class="footer__link" href="#">Табель</a><a class="footer__link" href="#">Другое</a></div><a class="footer__support" href="#">
+        <div class="footer__support-icon"></div>Служба поддержки</a>
+    </div>
+  </div>
+</footer>
+  <script src="libs.js"></script><script src="main.js"></script><script src="style.js"></script></body>
+</html>

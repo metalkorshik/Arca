@@ -1,0 +1,64 @@
+.user-panel
+    .container
+        .user-panel__inner
+            .user-panel__choice
+                .user-panel__title Контракты
+                .user-panel__type-box
+                    a(href="#").user-panel__type.user-panel__type--active Открытые
+                    a(href="#").user-panel__type Закрытые
+                    a(href="#").user-panel__type Контракты
+
+        .user-panel__selected.user-panel__selected--direction
+
+            .user-panel__select-box.user-panel__select-box--mb
+                .user-panel__select-box.user-panel__select-box--mr
+                    .user-panel__output-label Выводить по:
+                    .user-panel__sort-box.user-panel__sort-box-page
+                        select.user-panel__sort.user-panel__sort-page
+                            option 10
+                            option 20
+                            option 30
+                            option 50
+                            option Все
+                .user-panel__output-label ФИО заказчика:
+                .user-panel__input-box.user-panel__input-box--search-small
+                    input(type="text" placeholder="Фамилия").user-panel__input
+                    .user-panel__input-icon
+                        img(src="src/blocks/user-panel/assets/img/search.svg")
+
+                .user-panel__input-box.user-panel__input-box--search-small
+                    input(type="text" placeholder="Имя").user-panel__input
+                    .user-panel__input-icon
+                        img(src="src/blocks/user-panel/assets/img/search.svg")
+                .user-panel__input-box.user-panel__input-box--search-small.user-panel__input-box--mb-none
+                    input(type="text" placeholder="Отчество").user-panel__input
+                    .user-panel__input-icon
+                        img(src="src/blocks/user-panel/assets/img/search.svg")
+
+            .user-panel__select-box
+                .user-panel__output-label ФИО инженера:
+                .user-panel__input-box.user-panel__input-box--search-small
+                    input(type="text" placeholder="Фамилия").user-panel__input
+                    .user-panel__input-icon
+                        img(src="src/blocks/user-panel/assets/img/search.svg")
+
+                .user-panel__input-box.user-panel__input-box--search-small
+                    input(type="text" placeholder="Имя").user-panel__input
+                    .user-panel__input-icon
+                        img(src="src/blocks/user-panel/assets/img/search.svg")
+                .user-panel__input-box.user-panel__input-box--search-small.user-panel__input-box--mb-none
+                    input(type="text" placeholder="Отчество").user-panel__input
+                    .user-panel__input-icon
+                        img(src="src/blocks/user-panel/assets/img/search.svg")
+
+
+        .user-panel__panel-container
+            .user-panel__sort-box.user-panel__sort-box-date.user-panel__sort-box-date--mr
+                .user-panel__output-label По дате:
+                .user-panel__date-contracts
+                    input(type="text" placeholder="от").user-panel__input.user-panel__input-date.js-date
+                    input(type="text" placeholder="до").user-panel__input.user-panel__input-date.js-date
+
+            button.button.user-panel__search.user-panel__search--ml-none Поиск
+
+

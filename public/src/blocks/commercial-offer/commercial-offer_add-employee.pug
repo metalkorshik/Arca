@@ -1,0 +1,118 @@
+.commercial-offer
+    .container
+        .commercial-offer__inner
+            .commercial-offer__grid
+                .commercial-offer__photo
+                    img(src="../src/blocks/commercial-offer/assets/img/image.png")#imgshow.commercial-offer__image
+                    .commercial-offer__file-photo
+                        input(type="file" accept=".jpeg,.jpg,.png").commercial-offer__download-photo#imgload
+                        .button Добавить фото
+                .commerical-offer__block
+                    .commercial-offer__container
+                        .commercial-offer__item
+                            .commercial-offer__label.commercial-offer__label--necessarily  ФИО
+                            input(type="text" maxlength="50").commercial-offer__input
+                        .commercial-offer__item
+                            .commercial-offer__label Email
+                            input(type="email" maxlength="50" placeholder='').commercial-offer__input
+                    .commercial-offer__container
+                        .commercial-offer__item
+                            .commercial-offer__label.commercial-offer__label--necessarily Телефон
+                            input(type="text").commercial-offer__input.js-phone
+                        .commercial-offer__item
+                            .commercial-offer__label.commercial-offer__label--necessarily Дата рождения
+                            input(type="text").commercial-offer__input.js-date
+                    .commercial-offer__container
+                        .commercial-offer__item
+
+                            .commercial-offer__document
+                                .commercial-offer__document-box
+                                    .commercial-offer__label Серия
+                                    input(type="text").commercial-offer__input.js-input-series
+                                .commercial-offer__document-box
+                                    .commercial-offer__label Номер
+                                    input(type="text").commercial-offer__input.js-input-num
+                        .commercial-offer__item.select-style
+                            .commercial-offer__label Должность
+                            select(type="text" maxlength="50").js-select-position
+                                option Должность
+                                option Должность 2
+
+                    .commercial-offer__container
+                        .commercial-offer__item
+                            .commercial-offer__label Ставка
+                            input(type="number"  maxlength="50" min="0.01" step="0.01").commercial-offer__input.commercial-offer__input--width.js-validate-rate
+                    .commercial-offer__container
+                        .commercial-offer__item
+                            .commercial-offer__label Удостоверение
+                            .commercial-offer__container
+                                .commercial-offer__file
+                                    input(type="file" multiple onchange="javascript:downloadIdentity()").commercial-offer__file-input#inputIdentity
+                                    .commercial-offer__file-icon
+                                    .commercial-offer__file-text Выберите файлы или архив
+                    .commercial-offer__container
+                        .commercial-offer__item
+                            .commercial-offer__tab-block
+                                .commercial-offer__tab#listIdentity
+                                    .commercial-offer__tab-head
+                                        .commercial-offer__col
+                                            .commercial-offer__text Название
+                                        .commercial-offer__col
+                                            .commercial-offer__text Срок действия
+                                        .commercial-offer__col
+                                            .commercial-offer__text Дата выдачи
+                                    .commercial-offer__row
+                                        .commercial-offer__col
+                                            .commercial-offer__name 1
+                                        .commercial-offer__col
+                                            input(type="text" value="10/15/2020").commercial-offer__input-date.js-date
+                                        .commercial-offer__col
+                                            input(type="text" value="10/15/2020").commercial-offer__input-date.js-date
+                                        .commercial-offer__remove-box
+                                            .commercial-offer__remove
+                                            | Удалить
+
+
+                                    .commercial-offer__row
+                                        .commercial-offer__col
+                                            .commercial-offer__name 2
+                                        .commercial-offer__col
+                                            input(type="text" value="10/15/2020").commercial-offer__input-date.js-date
+                                        .commercial-offer__col
+                                            input(type="text" value="10/15/2020").commercial-offer__input-date.js-date
+                                        .commercial-offer__remove-box
+                                            .commercial-offer__remove
+                                            | Удалить
+                                    .commercial-offer__row
+                                        .commercial-offer__col
+                                            .commercial-offer__name 3
+                                        .commercial-offer__col
+                                            input(type="text" value="10/15/2020").commercial-offer__input-date.js-date
+                                        .commercial-offer__col
+                                            input(type="text" value="10/15/2020").commercial-offer__input-date.js-date
+                                        .commercial-offer__remove-box
+                                            .commercial-offer__remove
+                                            | Удалить
+                    .commercial-offer__container
+                        .commercial-offer__item
+                            .commercial-offer__label Рост
+                            input(type="text").commercial-offer__input.js-input-height
+
+                        .commercial-offer__item
+                            .commercial-offer__label Размер обуви
+                            input(type="text").commercial-offer__input.js-input-shoes
+                    .commercial-offer__container
+                        .commercial-offer__item
+                            .commercial-offer__label Размер одежды
+                            input(type="text" maxlength='4').commercial-offer__input.commercial-offer__input--width#inputClothes
+                    .commercial-offer__container
+                        .commercial-offer__item
+                            .commercial-offer__label Пароль
+                            input(type="password" maxlength="50").commercial-offer__input
+                        .commercial-offer__item
+                            .commercial-offer__label Подтверждение пароля
+                            input(type="password" maxlength="50").commercial-offer__input
+
+
+
+                    a(href="#").button.commercial-offer__btn Сохранить

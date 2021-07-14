@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модальные окна</title>
+  <link href="libs.css" rel="stylesheet"><link href="style.css" rel="stylesheet"></head>
+  <body>
+<header class="header">
+  <div class="container">
+    <div class="header__inner"><a class="header__logo" href="#"><img class="logo" src="src/blocks/logo/assets/img/logo.svg"></a>
+      <nav class="header__nav">
+        <div class="header__links"><a class="header__link header__link--active" href="#">
+            <div class="header__link-icon"><img src="src/blocks/header/assets/img/home.svg"></div>Главная</a><a class="header__link" href="#">
+            <div class="header__link-icon"><img src="src/blocks/header/assets/img/word.svg"></div>Контракты</a><a class="header__link" href="#">
+            <div class="header__link-icon"><img src="src/blocks/header/assets/img/personal.svg"></div>Персонал</a><a class="header__link" href="#">
+            <div class="header__link-icon"><img src="src/blocks/header/assets/img/tab.svg"></div>Табель</a><a class="header__link" href="#">
+            <div class="header__link-icon"><img src="src/blocks/header/assets/img/dots.svg"></div>Квартиры</a></div>
+      </nav>
+      <div class="header__user">
+        <div class="header__user-info"><a class="header__name" href="#">Имя Фамилия</a>
+          <div class="header__position">Суперадмин</div>
+        </div><a class="header__user-img" href="#"><img class="header__user-photo" src="src/blocks/header/assets/img/user.png"></a>
+        <div class="header__menu-container"><a class="header__menu" href="#"></a>
+          <div class="header__menu-list"><a class="header__link header__link--active" href="#">
+              <div class="header__link-icon"><img src="src/blocks/header/assets/img/home.svg"></div>Главная</a><a class="header__link" href="#">
+              <div class="header__link-icon"><img src="src/blocks/header/assets/img/word.svg"></div>Контракты</a><a class="header__link" href="#">
+              <div class="header__link-icon"><img src="src/blocks/header/assets/img/personal.svg"></div>Персонал</a><a class="header__link" href="#">
+              <div class="header__link-icon"><img src="src/blocks/header/assets/img/tab.svg"></div>Табель</a><a class="header__link" href="#">
+              <div class="header__link-icon"><img src="src/blocks/header/assets/img/dots.svg"></div>Квартиры</a></div>
+        </div>
+        <div class="header__notification-box">
+          <div class="header__notification-icon"></div>
+          <div class="header__notification">1</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="modals">
+  <div class="container"><a class="modal__sign-button" href="#">Войти</a>
+<div class="modal modal-sign">
+  <div class="modal__content">
+    <div class="modal__inner">
+      <div class="modal__close"><img src="src/blocks/modal/assets/img/close.svg"></div>
+      <div class="modal__sign-in">
+        <div class="modal__logo"><img class="logo" src="src/blocks/logo/assets/img/logo.svg">
+        </div>
+        <div class="modal__sign-in-container">
+          <div class="modal__title"> Вход</div>
+          <form>
+            <div class="modal__form-inner">
+              <div class="modal__label">Логин</div>
+              <input class="modal__input" type="text">
+              <div class="modal__label">Пароль</div>
+              <div class="modal__input-box">
+                <input class="modal__input modal__input-password" type="password">
+                <div class="modal__pass-icon"></div>
+              </div>
+            </div><a class="modal__pass-link" href="#">Забыли пароль?</a>
+            <button class="button button--width modal__button">Войти</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br><a class="modal__reset-button" href="#">Восстановить
+<div class="modal modal-reset">
+  <div class="modal__content">
+    <div class="modal__inner">
+      <div class="modal__close"><img src="src/blocks/modal/assets/img/close.svg"></div>
+      <div class="modal__sign-in">
+        <div class="modal__logo"><img class="logo" src="src/blocks/logo/assets/img/logo.svg">
+        </div>
+        <div class="modal__sign-in-container">
+          <div class="modal__title">Восстановление пароля</div>
+          <form>
+            <div class="modal__form-inner">
+              <div class="modal__label modal__label--mb">Введите email  (мы отправим письмо с подтверждением)</div>
+              <input class="modal__input" type="email   ">
+            </div>
+            <button class="button button--width modal__button">Восстановить пароль</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></a><br><a class="modal__contract-edit" href="#">Редактировать контракт
+<div class="modal modal-edit">
+  <div class="modal__content">
+    <div class="modal__close"><img src="src/blocks/modal/assets/img/close.svg"></div>
+    <div class="modal__edit-contract">
+      <div class="modal__header">Редактирование</div>
+      <div class="modal__inner-content">
+        <div class="modal__label">Заказчик</div>
+        <input class="modal__input modal__input--padding modal__input--mb" type="text">
+        <div class="modal__row">
+          <div class="modal__information-box">
+            <div class="modal__label">№ Контракта</div>
+            <input class="modal__input modal__input--padding modal__input--mb-none" type="text">
+          </div>
+          <div class="modal__information-box modal__information-box--width">
+            <div class="modal__label">Дата</div>
+            <input class="modal__input modal__input--padding modal__input--mb-none js-date" type="text">
+          </div>
+        </div>
+        <div class="modal__label">Ответственный заказчик</div>
+        <input class="modal__input modal__input--padding modal__input--mb" type="text">
+        <div class="modal__block-total">
+          <div class="modal__total">
+            <div class="modal__label">Итого:</div>
+            <div class="modal__input-box">
+              <div class="modal__wallet"><img src="src/blocks/modal/assets/img/wallet.svg"></div>
+              <input class="modal__input modal__input--mb-none modal__input--pl modal__input--background-focus" type="text">
+              <div class="modal__icon-rub"></div>
+            </div>
+          </div><a class="button modal__save-button" href="#">Сохранить</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></a><br><a class="modal__contract-button" href="#">Контракт
+<div class="modal modal-contract">
+  <div class="modal__content">
+    <div class="modal__contract">
+      <div class="modal__close"><img src="src/blocks/modal/assets/img/close.svg"></div>
+      <div class="modal__title modal__title--mb-small">Название проекта</div>
+      <div class="modal__text">№1235789123</div>
+      <div class="modal__contract-panel">
+        <div class="modal__expenses-today">
+          <div class="modal__label modal__label--small">Расходы на сегодня</div>
+          <input class="modal__input modal__input--big-text" type="text" value="100 000 руб.">
+        </div>
+        <div class="modal__expenses-container">
+          <div class="modal__label modal__label--small">Расходы на дату</div>
+          <div class="modal__expenses-inner">
+            <input class="modal__expenses-date js-date" type="text">
+            <input class="modal__expenses-date js-date" type="text">
+            <button class="modal__btn-search">
+              <div class="modal__search-icon"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal__contract-table">
+        <div class="modal__table-inner">
+          <div class="modal__contract-header">
+            <div class="modal__contract-name">
+              <div class="modal__label modal__label--small modal__label--mb-none">Наименования</div>
+            </div>
+            <div class="modal__contract-contribution">
+              <div class="modal__label modal__label--small modal__label--mb-none">Заложено</div>
+            </div>
+            <div class="modal__contract-consumption">
+              <div class="modal__label modal__label--small modal__label--mb-none">Израсходованно</div>
+            </div>
+          </div>
+          <div class="modal__contract-row">
+            <div class="modal__contract-name">
+              <div class="modal__text">Монтажный материал</div>
+            </div>
+            <div class="modal__contract-contribution">
+              <div class="modal__text modal__text--blue">90 000 руб.</div>
+            </div>
+            <div class="modal__contract-consumption">
+              <div class="modal__text modal__text--blue">0 руб.</div>
+            </div>
+            <button class="modal__edited"></button>
+          </div>
+          <div class="modal__contract-row">
+            <div class="modal__contract-name">
+              <div class="modal__text">Электромонтажный материал</div>
+            </div>
+            <div class="modal__contract-contribution">
+              <div class="modal__text modal__text--blue">900 руб.</div>
+            </div>
+            <div class="modal__contract-consumption">
+              <div class="modal__text modal__text--blue">0 руб.</div>
+            </div>
+            <button class="modal__edited"></button>
+          </div>
+          <div class="modal__contract-row">
+            <div class="modal__contract-name">
+              <div class="modal__text">Стоимость оборудования</div>
+            </div>
+            <div class="modal__contract-contribution">
+              <div class="modal__text modal__text--blue">4500 руб.</div>
+            </div>
+            <div class="modal__contract-consumption">
+              <div class="modal__text modal__text--blue">0 руб.</div>
+            </div>
+            <button class="modal__edited"></button>
+          </div>
+          <div class="modal__contract-row">
+            <div class="modal__contract-name">
+              <div class="modal__text">Аренда техники</div>
+            </div>
+            <div class="modal__contract-contribution">
+              <div class="modal__text modal__text--blue">4500 руб.</div>
+            </div>
+            <div class="modal__contract-consumption">
+              <div class="modal__text modal__text--blue">0 руб.</div>
+            </div>
+            <button class="modal__edited"></button>
+          </div>
+          <div class="modal__contract-row">
+            <div class="modal__contract-name">
+              <div class="modal__text">Стоимость проектных работ</div>
+            </div>
+            <div class="modal__contract-contribution">
+              <div class="modal__text modal__text--blue">0 руб.</div>
+            </div>
+            <div class="modal__contract-consumption">
+              <div class="modal__text modal__text--blue">0 руб.</div>
+            </div>
+            <button class="modal__edited"></button>
+          </div>
+          <div class="modal__contract-row">
+            <div class="modal__contract-name">
+              <div class="modal__text">Стоимость монтажных работ</div>
+            </div>
+            <div class="modal__contract-contribution">
+              <div class="modal__text modal__text--blue">0 руб.</div>
+            </div>
+            <div class="modal__contract-consumption">
+              <div class="modal__text modal__text--blue">0 руб.</div>
+            </div>
+            <button class="modal__edited"></button>
+          </div>
+          <div class="modal__contract-row">
+            <div class="modal__contract-name">
+              <div class="modal__text">Стоимость электромонтажных работ</div>
+            </div>
+            <div class="modal__contract-contribution">
+              <div class="modal__text modal__text--blue">0 руб.</div>
+            </div>
+            <div class="modal__contract-consumption">
+              <div class="modal__text modal__text--blue">0 руб.</div>
+            </div>
+            <button class="modal__edited"></button>
+          </div>
+          <div class="modal__contract-row">
+            <div class="modal__contract-name">
+              <div class="modal__text">Мобилизационные затраты</div>
+            </div>
+            <div class="modal__contract-contribution">
+              <div class="modal__text modal__text--blue">0 руб.</div>
+            </div>
+            <div class="modal__contract-consumption">
+              <div class="modal__text modal__text--blue">0 руб.</div>
+            </div>
+            <button class="modal__edited"></button>
+          </div>
+          <div class="modal__contract-row">
+            <div class="modal__contract-name">
+              <div class="modal__text">Мобилизационные затраты</div>
+            </div>
+            <div class="modal__contract-contribution">
+              <div class="modal__text modal__text--blue">1000 руб.</div>
+            </div>
+            <div class="modal__contract-consumption">
+              <div class="modal__text modal__text--blue">1000 руб.</div>
+            </div>
+            <button class="modal__edited"></button>
+          </div>
+        </div>
+      </div>
+      <button class="button modal__add-consumption modal__consumption-show">Добавить расход</button>
+      <div class="modal__table-footer">
+        <div class="modal__contract-total">
+          <div class="modal__label">Всего</div>
+          <div class="modal__sum">1000 руб.</div>
+        </div><a class="modal__project-btn modal__close-return" href="#">Закрыть проект</a>
+      </div>
+      <div class="files">
+        <div class="files__header">
+          <div class="files__title">Файлы</div>
+          <div class="files__file-icon"></div>
+        </div>
+        <div class="files__nav">
+          <button class="files__button">
+            <input class="files__download" type="file" onchange="javascript:downloadFiles()" id="downloadFiles">
+            <div class="files__button-icon files__button-icon--cloud"></div>Загрузка
+          </button>
+          <button class="files__button js-btn-create-folder">
+            <div class="files__button-icon files__button-icon--folder"></div>Создать папку
+          </button>
+          <button class="files__button">
+            <div class="files__button-icon files__button-icon--update"></div>
+          </button>
+          <button class="files__button js-btn-transfer">
+            <div class="files__button-icon files__button-icon--move"></div>Переместить
+          </button>
+          <button class="files__button js-btn-modal-remove">
+            <div class="files__button-icon files__button-icon--remove"></div>Удалить
+          </button>
+        </div>
+        <div class="files__inner">
+          <div class="files__container" id="filesOutput">
+            <div class="files__item">
+              <div class="files__type-icon files__type-icon--document"></div>
+              <div class="files__named">
+                <div class="files__name">news-document.pdf</div>
+                <div class="files__size">3 mb</div>
+              </div>
+            </div>
+            <div class="files__item">
+              <div class="files__type-icon files__type-icon--folder"></div>
+              <div class="files__named">
+                <div class="files__name">test folder</div>
+              </div>
+            </div>
+            <div class="files__item">
+              <div class="files__type-icon files__type-icon--folder"></div>
+              <div class="files__named">
+                <div class="files__name">test folder 2</div>
+              </div>
+            </div>
+          </div>
+          <div class="files__info-block" id="outputInformation">
+            <div class="files__info">
+              <div class="files__info-close"></div>
+              <div class="files__info-image">
+                <div class="files__info-type files__info-type--document"></div>
+              </div>
+              <div class="files__info-inner">
+                <div class="files__label">Название:</div>
+                <input class="input-styled files__input-name" type="text" value="news-document.pdf" placeholder="Название">
+                <div class="files__info-row">
+                  <div class="files__label">Тип:</div>
+                  <div class="files__info-text files__info-text--ml">news-document.pdf</div>
+                </div>
+                <div class="files__info-row">
+                  <div class="files__label">Размер:</div>
+                  <div class="files__info-text files__info-text--ml">3 MB</div>
+                </div>
+                <div class="files__info-row">
+                  <div class="files__label">Ссылка:</div><a class="files__link" href="#">Кликните тут</a>
+                </div>
+                <div class="files__info-row files__info-row--direction">
+                  <div class="files__label">Последнее изменение:</div>
+                  <div class="files__info-text files__info-text--mt">29/10/2020</div>
+                </div>
+              </div>
+            </div>
+            <div class="files__info">
+              <div class="files__info-close"></div>
+              <div class="files__info-image">
+                <div class="files__info-type files__info-type--document"></div>
+              </div>
+              <div class="files__info-inner">
+                <div class="files__label">Название:</div>
+                <input class="input-styled files__input-name" type="text" value="news-document.pdf" placeholder="Название">
+                <div class="files__info-row">
+                  <div class="files__label">Тип:</div>
+                  <div class="files__info-text files__info-text--ml">news-document.pdf</div>
+                </div>
+                <div class="files__info-row">
+                  <div class="files__label">Размер:</div>
+                  <div class="files__info-text files__info-text--ml">3 MB</div>
+                </div>
+                <div class="files__info-row">
+                  <div class="files__label">Ссылка:</div><a class="files__link" href="#">Кликните тут</a>
+                </div>
+                <div class="files__info-row files__info-row--direction">
+                  <div class="files__label">Последнее изменение:</div>
+                  <div class="files__info-text files__info-text--mt">29/10/2020</div>
+                </div>
+              </div>
+            </div>
+            <div class="files__info">
+              <div class="files__info-close"></div>
+              <div class="files__info-image">
+                <div class="files__info-type files__info-type--document"></div>
+              </div>
+              <div class="files__info-inner">
+                <div class="files__label">Название:</div>
+                <input class="input-styled files__input-name" type="text" value="news-document.pdf" placeholder="Название">
+                <div class="files__info-row">
+                  <div class="files__label">Тип:</div>
+                  <div class="files__info-text files__info-text--ml">news-document.pdf</div>
+                </div>
+                <div class="files__info-row">
+                  <div class="files__label">Размер:</div>
+                  <div class="files__info-text files__info-text--ml">3 MB</div>
+                </div>
+                <div class="files__info-row">
+                  <div class="files__label">Ссылка:</div><a class="files__link" href="#">Кликните тут</a>
+                </div>
+                <div class="files__info-row files__info-row--direction">
+                  <div class="files__label">Последнее изменение:</div>
+                  <div class="files__info-text files__info-text--mt">29/10/2020</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="files-modal js-create-folder">
+        <div class="overlay"></div>
+        <div class="files-modal__box">
+          <div class="files-modal__overtitle">
+            <div class="files-modal__overtitle-icon files-modal__overtitle-icon--folder"></div>
+            <div class="files-modal__overtitle-title">Добавить новую папку</div>
+            <div class="files-modal__close"></div>
+          </div>
+          <div class="files-modal__modal-inner">
+            <input class="files-modal__modal-input" type="text" placeholder="Новое имя папки" id="nameFolder">
+            <div class="files-modal__modal-nav">
+              <button class="button button--grey files-modal__modal-button js-modal-cancel">Отмена</button>
+              <button class="button files-modal__modal-button js-btn-folder">Создать новую папку</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="files-modal js-file-transfer">
+        <div class="overlay"></div>
+        <div class="files-modal__box">
+          <div class="files-modal__overtitle files-modal__overtitle--orange">
+            <div class="files-modal__overtitle-icon files-modal__overtitle-icon--transfer"></div>
+            <div class="files-modal__overtitle-title">Переместить файл/папку</div>
+            <div class="files-modal__close"></div>
+          </div>
+          <div class="files-modal__modal-inner">
+            <div class="files-modal__select-box">
+              <select class="files-modal__select">
+                <option disabled selected>Папка назначения</option>
+                <option>1234</option>
+                <option>12345</option>
+              </select>
+            </div>
+            <div class="files-modal__modal-nav">
+              <button class="button button--grey files-modal__modal-button js-modal-cancel">Отмена</button>
+              <button class="button button--orange files-modal__modal-button js-transfer-file">Переместить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="files-modal js-modal-remove">
+        <div class="overlay">
+          <div class="files-modal__box">
+            <div class="files-modal__overtitle">
+              <div class="files-modal__overtitle-icon files-modal__overtitle-icon--remove"></div>
+              <div class="files-modal__overtitle-title">Удаление файла</div>
+              <div class="files-modal__close"></div>
+            </div>
+            <div class="files-modal__modal-inner">
+              <div class="files-modal__text">Вы действительно хотите удалить файл?</div>
+              <div class="files-modal__buttons">
+                <div class="button files-modal__btn js-btn-remove">Да</div>
+                <div class="button files-modal__btn js-modal-cancel">Нет</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal__title modal__title--thin">Примечание</div>
+      <div class="modal__comments" id="comments">
+        <div class="modal__comment">
+          <div class="modal__comment-info">
+            <div class="modal__text modal__comment-name">Вимм Билль Данн</div>
+            <div class="modal__text modal__text--mr">18.01.2020г</div>
+            <div class="modal__text">12:22</div>
+          </div>
+          <div class="modal__text">Тут многострочный текст, который может оставлять каждый пользователь. По типу комментариев ВК</div>
+          <button class="button modal__reply">Ответить</button>
+        </div>
+        <div class="modal__comment modal__comment--right">
+          <div class="modal__comment-info">
+            <div class="modal__text modal__comment-name">Вимм Билль Данн</div>
+            <div class="modal__text modal__text--mr">18.01.2020г</div>
+            <div class="modal__text">12:22</div>
+          </div>
+          <div class="modal__text">Тут многострочный текст, который может оставлять каждый пользователь. По типу комментариев ВК</div>
+          <button class="button modal__reply">Ответить</button>
+        </div>
+        <div class="modal__comment modal__comment--right">
+          <div class="modal__comment-info">
+            <div class="modal__text modal__comment-name">Вимм Билль Данн</div>
+            <div class="modal__text modal__text--mr">18.01.2020г</div>
+            <div class="modal__text">12:22</div>
+          </div>
+          <div class="modal__text">Тут многострочный текст, который может оставлять каждый пользователь. По типу комментариев ВК</div>
+          <button class="button modal__reply">Ответить</button>
+        </div>
+        <div class="modal__comment">
+          <div class="modal__comment-info">
+            <div class="modal__text modal__comment-name">Вимм Билль Данн</div>
+            <div class="modal__text modal__text--mr">18.01.2020г</div>
+            <div class="modal__text">12:22</div>
+          </div>
+          <div class="modal__text">Тут многострочный текст, который может оставлять каждый пользователь. По типу комментариев ВК</div>
+          <button class="button modal__reply">Ответить</button>
+        </div>
+      </div>
+      <textarea class="modal__textarea-comment" placeholder="Введите комментарий" id="textMessage"></textarea>
+      <div class="modal__request-box"><a class="button modal__request-btn" href="#">Оставить заметку</a></div>
+    </div>
+  </div>
+</div>
+<div class="modal-close">
+  <div class="modal-close__inner">
+    <div class="modal-close__title">Вы точно уверены что хотите закрыть проект?</div>
+    <div class="modal-close__buttons"><a class="button modal-close__button js-modal-yes" href="#">Да</a><a class="button modal-close__button js-modal-no" href="#">Нет</a></div>
+  </div>
+</div></a><br><a class="modal__table-button" href="#">Редактирование таблицы
+<div class="modal modal-edit-table">
+  <div class="modal__content">
+    <div class="modal__close"><img src="src/blocks/modal/assets/img/close.svg"></div>
+    <div class="modal__edit-table">
+      <div class="modal__header">Редактирование таблицы</div>
+      <div class="modal__inner-content">
+        <div class="modal__label">1 столбец</div>
+        <div class="modal__input-col">
+          <input class="modal__input modal__input--indent-col" type="text" value="ФИО">
+          <div class="modal__col-icon"></div>
+        </div>
+        <div class="modal__label">2 столбец</div>
+        <div class="modal__input-col">
+          <input class="modal__input modal__input--indent-col" type="text" value="Должность">
+          <div class="modal__col-icon"></div>
+        </div>
+        <div class="modal__label">3 столбец</div>
+        <div class="modal__input-col">
+          <input class="modal__input modal__input--indent-col" type="text" value="Ставка">
+          <div class="modal__col-icon"></div>
+        </div><a class="modal__add-col" href="#">Добавить столбец
+          <div class="modal__add-icon"><img src="src/blocks/modal/assets/img/plus.svg"></div></a><a class="button" href="#">Сохранить</a>
+      </div>
+    </div>
+  </div>
+</div></a><br><a class="modal__employee-button" href="#">Добавить сотрудника
+<div class="modal modal-employee">
+  <div class="modal__content">
+    <div class="modal__close"><img src="src/blocks/modal/assets/img/close.svg"></div>
+    <div class="modal__employee">
+      <div class="modal__employee-img-box"><img class="modal__employee-img" src="src/blocks/modal/assets/img/employee.png"></div>
+      <div class="modal__header modal__header--pr">Добавить сотрудника</div>
+      <div class="modal__inner-content modal__inner-content--height">
+        <div class="modal__label">ФИО</div>
+        <input class="modal__input" type="text" value="Вимм Билль Данн">
+        <div class="modal__position">
+          <div class="modal__label">Должность</div>
+          <div class="modal__position-box">
+            <select class="modal__position-select" value="Сварка">
+              <option>Сварка</option>
+              <option>Сварка2</option>
+              <option>Сварка3</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal__certification-block">
+          <div class="modal__certification-item">
+            <div class="modal__label">Удостоверение</div>
+            <div class="modal-inputfile">
+              <label class="choice" for="myfile">
+                <div class="modal-inputfile__icon"></div>
+                <div class="modal-inputfile__text">Загрузите удостоверение</div>
+              </label>
+              <input class="my" type="file" name="myfile" multiple id="myfile">
+            </div>
+          </div>
+          <div class="modal__term">
+            <div class="modal__label">Срок Действия / Дата выдачи</div>
+            <div class="modal__term-row">
+              <input class="modal__input modal__input--mb-none modal__term-input js-date" type="text" value="12/11/2022">
+              <input class="modal__input modal__input--mb-none modal__term-input js-date" type="text" value="12/11/2018">
+            </div>
+          </div>
+        </div>
+        <div class="modal__employee-rate">
+          <div class="modal__total">
+            <div class="modal__label">Ставка</div>
+            <div class="modal__input-box">
+              <div class="modal__wallet"><img src="src/blocks/modal/assets/img/wallet.svg"></div>
+              <input class="modal__input modal__input--mb-none modal__input--pl modal__input--background-focus" type="text" value="400">
+              <div class="modal__icon-rub"></div>
+            </div>
+          </div>
+        </div><a class="button modal__save-edit" href="#">Сохранить</a>
+      </div>
+    </div>
+  </div>
+</div></a><br><a class="modal__employee-card-button" href="#">Карточка сотрудника
+<div class="modal modal-employee-card">
+  <div class="modal__content">
+    <div class="modal__close"><img src="src/blocks/modal/assets/img/close.svg"></div>
+    <div class="modal__employee-card">
+      <div class="modal__title">Карточка сотрудника</div>
+      <div class="modal__tabs">
+        <div class="modal__tab-item modal__tab-item--active">Персональная информация</div>
+        <div class="modal__tab-item">Календарь</div>
+        <div class="modal__tab-item">Другое</div>
+      </div>
+      <div class="modal__employee-inner modal__employee-inner--active">
+        <div class="modal__employee-box">
+          <div class="modal__employee-preview"><img class="modal__employee-photo" src="src/blocks/modal/assets/img/person-1.png" accept=".png,.jpeg,.jpg" id="imgOutput">
+            <div class="modal__employee-download">
+              <input class="modal__download-file" type="file" id="imgInput"><a class="modal__add-photo" href="#">Добавить фото</a>
+            </div>
+          </div>
+          <div class="modal__container">
+            <div class="modal__named-row">
+              <div class="modal__status">Монтажник</div>
+              <div class="modal__edit-icon"></div>
+            </div>
+            <div class="modal__profile-row">
+              <div class="modal__input-box modal__input-box--mr">
+                <div class="modal__label modal__label--light-grey">ФИО</div>
+                <div class="modal__input-container">
+                  <input class="modal__input modal__input--mb-none modal__input-name modal__input-edit" type="text" value="Шахбазаян Денис Арменович" disabled maxlength="50">
+                  <div class="modal__edit-icon modal__edit-icon--position"></div>
+                </div>
+              </div>
+              <div class="modal__input-box">
+                <div class="modal__label modal__label--light-grey">Дата рождения</div>
+                <div class="modal__input-container">
+                  <input class="modal__input modal__input--mb-none modal__input-born modal__input-edit js-date" type="text" value="01/01/1990" disabled>
+                  <div class="modal__edit-icon modal__edit-icon--position"></div>
+                </div>
+              </div>
+            </div>
+            <div class="modal__profile-row">
+              <div class="modal__input-box modal__input-box--mr">
+                <div class="modal__label modal__label--light-grey">Ставка</div>
+                <div class="modal__input-container">
+                  <input class="modal__input modal__input--mb-none modal__input-rate modal__input-edit js-valid-area" type="number" disabled min="0.01" step="0.01">
+                  <div class="modal__edit-icon modal__edit-icon--position"></div>
+                </div>
+              </div>
+              <div class="modal__input-box">
+                <div class="modal__label modal__label--light-grey">E-mail</div>
+                <div class="modal__input-container">
+                  <input class="modal__input modal__input--mb-none modal__input-email modal__input-edit" type="text" value="Arca@gmail.com" disabled>
+                  <div class="modal__edit-icon modal__edit-icon--position"></div>
+                </div>
+              </div>
+            </div>
+            <div class="modal__profile-row">
+              <div class="modal__input-box modal__input-box--mr">
+                <div class="modal__label modal__label--light-grey">Телефон</div>
+                <div class="modal__input-container">
+                  <input class="modal__input modal__input--mb-none modal__input-phone modal__input-edit js-phone" type="text" value="+7 945 000 00 00" disabled>
+                  <div class="modal__edit-icon modal__edit-icon--position"></div>
+                </div>
+              </div>
+            </div>
+            <div class="modal__parameters">
+              <div class="modal__parameters-item">
+                <div class="modal__label modal__label--light-grey">Размер одежды</div>
+                <div class="modal__parameters-info">
+                  <input class="modal__parameters-text modal__parameters-text--width-size modal__input-edit" type="text" value="L" maxlength="5" disabled>
+                  <div class="modal__edit-icon"></div>
+                </div>
+              </div>
+              <div class="modal__parameters-item">
+                <div class="modal__label modal__label--light-grey">Рост:</div>
+                <div class="modal__parameters-info">
+                  <input class="modal__parameters-text modal__input-edit js-input-height" type="text" value="175" disabled>
+                  <div class="modal__edit-icon"></div>
+                </div>
+              </div>
+              <div class="modal__parameters-item">
+                <div class="modal__label modal__label--light-grey">Размер обуви:</div>
+                <div class="modal__parameters-info">
+                  <input class="modal__parameters-text modal__parameters-text--width-small modal__input-edit js-input-shoes" type="text" value="42" disabled>
+                  <div class="modal__edit-icon"></div>
+                </div>
+              </div>
+            </div>
+            <div class="modal__passport-title">Паспорт</div>
+            <div class="modal__profile-row modal__profile-row--mobile-row">
+              <div class="modal__input-box modal__box-series modal__input-box--mr">
+                <div class="modal__label modal__label--light-grey">Серия</div>
+                <input class="modal__input-pass modal__input modal__input--mb-none modal__input-series js-edit-input js-valid-area" type="password" min="0" maxlength="4" value="3222" disabled id="password-input">
+              </div>
+              <div class="modal__input-box">
+                <div class="modal__label modal__label--light-grey">Номер</div>
+                <div class="modal__input-container">
+                  <input class="modal__input-pass modal__input modal__input--mb-none modal__input-number js-edit-input js-valid-area" type="password" value="123213" min="0" maxlength="6" disabled>
+                  <div class="modal__edit-icon js-edit-pass"></div>
+                  <div class="modal__pass-box">
+                    <div class="modal__show-icon"></div>
+                    <div class="modal__hidden-icon"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container">
+          <div class="modal__label">Всего отработано часов:</div>
+          <div class="modal__graphic">
+            <div class="js-ring-chart-wrapper">
+              <div class="js-ring-chart-tooltip"></div>
+              <div class="js-ring-chart-box">
+                <figure class="highcharts-figure">
+                  <div class="js-ring-chart" data-rings="[ { &quot;today&quot;: { &quot;real&quot;: 6, &quot;goal&quot;: 8 }, &quot;week&quot;: { &quot;real&quot;: 11, &quot;goal&quot;: 40 }, &quot;month&quot;: { &quot;real&quot;: 50, &quot;goal&quot;: 70 } } ]"></div>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="modal__activity">
+            <div class="modal__activity-item">
+              <div class="modal__activity-status"></div>
+              <div class="modal__activity-title">Отработал часов<span> сегодня</span></div>
+            </div>
+            <div class="modal__timer"><span class="modal__timer-text modal__timer-text--green js-today"></span> из 8</div>
+            <div class="modal__activity-item">
+              <div class="modal__activity-status modal__activity-status--black"></div>
+              <div class="modal__activity-title">Отработал часов<span> на этой неделе</span></div>
+            </div>
+            <div class="modal__timer"><span class="modal__timer-text modal__timer-text--green js-week"></span> из 40</div>
+            <div class="modal__activity-item">
+              <div class="modal__activity-status modal__activity-status--green"></div>
+              <div class="modal__activity-title">Отработал часов<span> в этом месяце</span></div>
+            </div>
+            <div class="modal__timer"><span class="modal__timer-text modal__timer-text--red js-month"></span> из 70</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal__employee-inner">
+<div class="calendar">
+  <div class="calendar__buttons"><a class="button calendar__button" href="#">
+      <div class="calendar__button-icon calendar__button-icon--plus"></div>Премия</a><a class="button calendar__button calendar__button--opacity" href="#">
+      <div class="calendar__button-icon calendar__button-icon--plus"></div>Выплата</a></div>
+  <div class="calendar__trip">
+    <div class="calendar__title calendar__trip-title">Командировочные</div>
+    <form class="calendar__trip-form">
+      <div class="calendar__trip-box">
+        <div class="calendar__select-box">
+          <select class="calendar__trip-select">
+            <option disabled selected>Название проекта</option>
+            <option>Название проекта 2</option>
+          </select>
+        </div>
+        <input class="calendar__trip-input js-valid-area" type="number" step="0.1" min="0.1">
+      </div>
+      <button class="button calendar__trip-btn js-trip-save">Отправить</button>
+    </form>
+  </div>
+  <div class="date-items calendar__date-items">
+    <div class="date-items__dates">
+      <div class="button date-items__item">Август</div>
+      <div class="button date-items__item">Сентябрь</div>
+      <div class="button date-items__item">Октябрь</div>
+    </div>
+    <div class="date-items__separator">,</div>
+    <div class="date-items__dates">
+      <div class="button date-items__item">2020</div>
+    </div>
+  </div>
+  <div class="calendar__panel">
+    <div class="calendar__title">Табель</div>
+    <div class="calendar__dates">
+      <div class="calendar__date-box">
+        <div class="calendar__date-text">От:</div>
+        <div class="calendar__date-selector">
+          <input class="calendar__date-input js-datepicker-year" type="text">
+        </div>
+      </div>
+      <div class="calendar__date-box">
+        <div class="calendar__date-text">До:</div>
+        <div class="calendar__date-selector">
+          <input class="calendar__date-input js-datepicker-year" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="calendar__tab">
+    <div class="calendar__overhead">
+      <div class="calendar__overhead-text">1</div>
+      <div class="calendar__overhead-text">2</div>
+      <div class="calendar__overhead-text">3</div>
+      <div class="calendar__overhead-text">4</div>
+      <div class="calendar__overhead-text">5</div>
+      <div class="calendar__overhead-text">6</div>
+      <div class="calendar__overhead-text">7</div>
+      <div class="calendar__overhead-text">8</div>
+      <div class="calendar__overhead-text">9</div>
+      <div class="calendar__overhead-text">10</div>
+      <div class="calendar__overhead-text">11</div>
+      <div class="calendar__overhead-text">12</div>
+      <div class="calendar__overhead-text">13</div>
+      <div class="calendar__overhead-text">14</div>
+      <div class="calendar__overhead-text">15</div>
+      <div class="calendar__overhead-text">16</div>
+      <div class="calendar__overhead-text">17</div>
+      <div class="calendar__overhead-text">18</div>
+      <div class="calendar__overhead-text">19</div>
+      <div class="calendar__overhead-text">20</div>
+      <div class="calendar__overhead-text">21</div>
+      <div class="calendar__overhead-text">22</div>
+      <div class="calendar__overhead-text">23</div>
+      <div class="calendar__overhead-text">24</div>
+      <div class="calendar__overhead-text">25</div>
+      <div class="calendar__overhead-text">26</div>
+      <div class="calendar__overhead-text">27</div>
+      <div class="calendar__overhead-text">28</div>
+      <div class="calendar__overhead-text">29</div>
+      <div class="calendar__overhead-text">30</div>
+      <div class="calendar__overhead-text calendar__overhead-text--hours">Часы</div>
+      <div class="calendar__overhead-text calendar__overhead-text--days">Дни</div>
+      <div class="calendar__overhead-text calendar__overhead-text--business">Командировочные</div>
+    </div>
+    <div class="calendar__contract">
+      <div class="calendar__contract-title">Название контракта</div>
+      <div class="calendar__row">
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell calendar__comment calendar__cell--filled">
+          <div class="calendar__cell-text">10</div>
+        </div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell calendar__cell--filled">
+          <div class="calendar__cell-text">10</div>
+        </div>
+        <div class="calendar__cell calendar__cell--filled">
+          <div class="calendar__cell-text">10</div>
+        </div>
+        <div class="calendar__cell calendar__cell--filled">
+          <div class="calendar__cell-text">10</div>
+        </div>
+        <div class="calendar__cell calendar__cell--filled">
+          <div class="calendar__cell-text">10</div>
+        </div>
+        <div class="calendar__cell calendar__cell--filled">
+          <div class="calendar__cell-text">10</div>
+        </div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell calendar__cell--hours">
+          <div class="calendar__cell-text">50</div>
+        </div>
+        <div class="calendar__cell calendar__cell--days">
+          <div class="calendar__cell-text">5</div>
+        </div>
+        <div class="calendar__cell calendar__cell--business">
+          <div class="calendar__cell-text">3000,00</div>
+        </div>
+      </div>
+    </div>
+    <div class="calendar__contract">
+      <div class="calendar__contract-title">Название контракта</div>
+      <div class="calendar__row">
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell calendar__cell--filled">
+          <div class="calendar__cell-text">10</div>
+        </div>
+        <div class="calendar__cell calendar__cell--filled">
+          <div class="calendar__cell-text">10</div>
+        </div>
+        <div class="calendar__cell calendar__cell--filled">
+          <div class="calendar__cell-text">10</div>
+        </div>
+        <div class="calendar__cell calendar__cell--filled">
+          <div class="calendar__cell-text">10</div>
+        </div>
+        <div class="calendar__cell calendar__cell--filled">
+          <div class="calendar__cell-text">10</div>
+        </div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell calendar__cell--hours">
+          <div class="calendar__cell-text">50</div>
+        </div>
+        <div class="calendar__cell calendar__cell--days">
+          <div class="calendar__cell-text">5</div>
+        </div>
+        <div class="calendar__cell calendar__cell--business">
+          <div class="calendar__cell-text">3000,00</div>
+        </div>
+      </div>
+    </div>
+    <div class="calendar__contract">
+      <div class="calendar__contract-title">Название контракта</div>
+      <div class="calendar__row">
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell calendar__cell--filled">
+          <div class="calendar__cell-text">10</div>
+        </div>
+        <div class="calendar__cell calendar__cell--filled">
+          <div class="calendar__cell-text">10</div>
+        </div>
+        <div class="calendar__cell calendar__cell--filled">
+          <div class="calendar__cell-text">10</div>
+        </div>
+        <div class="calendar__cell calendar__cell--filled">
+          <div class="calendar__cell-text">10</div>
+        </div>
+        <div class="calendar__cell calendar__cell--filled">
+          <div class="calendar__cell-text">10</div>
+        </div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell"></div>
+        <div class="calendar__cell calendar__cell--hours">
+          <div class="calendar__cell-text">50</div>
+        </div>
+        <div class="calendar__cell calendar__cell--days">
+          <div class="calendar__cell-text">5</div>
+        </div>
+        <div class="calendar__cell calendar__cell--business">
+          <div class="calendar__cell-text">3000,00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="calendar__title calendar__history-title">История</div>
+  <div class="calendar__history-row">
+    <div class="calendar__history-text">Вимм Билль Данн</div>
+    <div class="calendar__history-text">Премия</div>
+    <div class="calendar__history-text">18.01.2020г</div>
+    <div class="calendar__history-text">+5000 руб.</div>
+  </div>
+  <div class="calendar__history-row calendar__history-row--blue">
+    <div class="calendar__history-text">Вимм Билль Данн</div>
+    <div class="calendar__history-text">Премия</div>
+    <div class="calendar__history-text">18.01.2020г</div>
+    <div class="calendar__history-text">+5000 руб.</div>
+  </div>
+  <div class="calendar__history-row">
+    <div class="calendar__history-text">Вимм Билль Данн</div>
+    <div class="calendar__history-text">Премия</div>
+    <div class="calendar__history-text">18.01.2020г</div>
+    <div class="calendar__history-text">+5000 руб.</div>
+  </div>
+  <div class="calendar__history-row calendar__history-row--blue">
+    <div class="calendar__history-text">Вимм Билль Данн</div>
+    <div class="calendar__history-text">Премия</div>
+    <div class="calendar__history-text">18.01.2020г</div>
+    <div class="calendar__history-text">+5000 руб.</div>
+  </div>
+</div>
+      </div>
+      <div class="modal__employee-inner">
+<div class="calendar">
+  <div class="calendar__title">Место и Дата</div>
+  <div class="calendar__housing">
+    <div class="calendar__box">
+      <div class="modal__label">Квартира</div>
+      <div class="calendar__flat-box">
+        <select class="js-select-flat">
+          <option>Генерала Ермолова ул, 12</option>
+          <option>Генерала Ермолова ул, 12</option>
+          <option>Генерала Ермолова ул, 12</option>
+        </select>
+      </div>
+    </div>
+    <div class="calendar__box">
+      <div class="calendar__box-dates">
+        <div class="calendar__dates-container calendar__dates-container--center-border">
+          <div class="modal__label">Въезд</div>
+          <input class="calendar__date calendar__date--right" type="text" value="15 сент." id="from">
+        </div>
+        <div class="calendar__dates-container">
+          <div class="modal__label modal__label--date-left">Выезд</div>
+          <input class="calendar__date calendar__date--left" type="text" value="1 окт." id="to">
+        </div>
+      </div>
+    </div>
+  </div><a class="button calendar__save-btn" href="#">Сохранить</a>
+  <div class="calendar__title">Расходы</div>
+  <div class="calendar__expenses">
+    <div class="calendar__costs-box">
+      <div class="calendar__costs-item">
+        <div class="calendar__costs-headtitle">
+          <div class="calendar__costs-status"></div>
+          <div class="calendar__costs-title">Доходы (80%)</div>
+        </div>
+        <div class="calendar__costs-value calendar__costs-value--green">50 000 руб.</div>
+      </div>
+      <div class="calendar__costs-item">
+        <div class="calendar__costs-headtitle">
+          <div class="calendar__costs-status calendar__costs-status--black"></div>
+          <div class="calendar__costs-title">Расходы (20%)</div>
+        </div>
+        <div class="calendar__costs-value">-10 000 руб</div>
+      </div>
+    </div>
+    <figure class="highcharts-figure">
+      <div id="container2"></div>
+    </figure>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</div></a><br><a class="modal__subtract" href="#">Вычитать
+<div class="modal modal-subtract">
+  <div class="modal__content">
+    <div class="modal__close"><img src="src/blocks/modal/assets/img/close.svg"></div>
+    <div class="modal__subtract">
+      <div class="modal__header modal__header--small">Вычитать</div>
+      <div class="modal__subtract-inner">
+        <div class="modal__subtract-value">
+          <div class="modal__subtract-button minus"><img src="src/blocks/modal/assets/img/minus.svg"></div>
+          <input class="modal__subtract-input" type="text" value="1000" id="input-subtract">
+          <div class="modal__subtract-currency">&#8381;</div>
+          <div class="modal__subtract-button plus"><img src="src/blocks/modal/assets/img/plus-grey.svg"></div>
+        </div>
+        <div class="modal__range-box">
+          <input class="modal__range-slider" type="text" data-min="0" data-max="10000" data-from="1000" id="slider-subtract">
+        </div><a class="button modal__save-button" href="#">Вычитать</a>
+      </div>
+    </div>
+  </div>
+</div></a><br><a class="modal__prize" href="#">Премия
+<div class="modal modal-prize">
+  <div class="modal__content">
+    <div class="modal__close"><img src="src/blocks/modal/assets/img/close.svg"></div>
+    <div class="modal__subtract">
+      <div class="modal__header modal__header--small">Премия</div>
+      <div class="modal__subtract-inner">
+        <div class="modal__subtract-value">
+          <div class="modal__subtract-button minus"><img src="src/blocks/modal/assets/img/minus.svg"></div>
+          <input class="modal__subtract-input" type="text" value="1000" id="input-prize">
+          <div class="modal__subtract-currency">&#8381;</div>
+          <div class="modal__subtract-button plus"><img src="src/blocks/modal/assets/img/plus-grey.svg"></div>
+        </div>
+        <div class="modal__range-box">
+          <input class="modal__range-slider" type="text" data-min="0" data-max="10000" data-from="1000" id="slider-prize">
+        </div><a class="button modal__save-button" href="#">Выдать премию</a>
+      </div>
+    </div>
+  </div>
+</div></a><br><a class="modal__editing" href="#">Редактирование
+<div class="modal modal-editing">
+  <div class="modal__content">
+    <div class="modal__close"><img src="src/blocks/modal/assets/img/close.svg"></div>
+    <div class="modal__edit-table">
+      <div class="modal__header">Редактирование</div>
+      <div class="modal__editing-inner">
+        <div class="modal__editing-row">
+          <div class="modal__editing-item">
+            <div class="modal__editing-title">Количество часов</div>
+            <input class="modal__editing-input" type="text" value="10">
+          </div>
+          <div class="modal__editing-item">
+            <div class="modal__editing-title">Название проекта</div>
+            <div class="modal__editing-box">
+              <select class="modal__editing-select">
+                <option> Сварка</option>
+                <option> Свар32</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <textarea class="modal__editing-area" placeholder="Комментарий"></textarea>
+        <div class="modal__editing-box"><a class="button modal__editing-btn" href="#">Сохранить</a></div>
+      </div>
+    </div>
+  </div>
+</div></a><br><a class="modal__apartments" href="#">Квартира
+<div class="modal modal-apartments">
+  <div class="modal__content">
+    <div class="modal__close"><img src="src/blocks/modal/assets/img/close.svg"></div>
+    <div class="modal__apartments-box">
+      <div class="modal__header modal__header--apartments">Генерала Ермолова ул, 12</div>
+      <div class="modal__apartments-inner">
+        <div class="modal__apartments-overhead">
+          <div class="modal__apartments-name modal__apartments-name--pb">
+            <div class="modal__text">Проживают (ли) в квартире:</div>
+          </div>
+          <div class="modal__apartments-arrival">
+            <div class="modal__text">Прибытие</div>
+          </div>
+          <div class="modal__apartments-departure">
+            <div class="modal__text">Выезд</div>
+          </div>
+        </div>
+        <div class="modal__apartments-row">
+          <div class="modal__apartments-name">
+            <div class="modal__text modal__text--hidden">Проживают (ли) в квартире:</div>
+            <div class="modal__text modal__text--bold">1.Вимм Билль Данн</div>
+          </div>
+          <div class="modal__apartments-arrival">
+            <div class="modal__text modal__text--hidden">Прибытие</div>
+            <div class="modal__text">18. 08. 2020</div>
+          </div>
+          <div class="modal__apartments-departure">
+            <div class="modal__text modal__text--hidden">Выезд</div>
+            <div class="modal__text">19. 09. 2020</div>
+          </div>
+        </div>
+        <div class="modal__apartments-row">
+          <div class="modal__apartments-name">
+            <div class="modal__text modal__text--hidden">Проживают (ли) в квартире:</div>
+            <div class="modal__text modal__text--bold">2.Вимм Билль Данн</div>
+          </div>
+          <div class="modal__apartments-arrival">
+            <div class="modal__text modal__text--hidden">Прибытие</div>
+            <div class="modal__text">18. 08. 2020</div>
+          </div>
+          <div class="modal__apartments-departure">
+            <div class="modal__text modal__text--hidden">Выезд</div>
+            <div class="modal__text">19. 09. 2020</div>
+          </div>
+        </div>
+        <div class="modal__apartments-row">
+          <div class="modal__apartments-name">
+            <div class="modal__text modal__text--hidden">Проживают (ли) в квартире:</div>
+            <div class="modal__text modal__text--bold">3.Вимм Билль Данн</div>
+          </div>
+          <div class="modal__apartments-arrival">
+            <div class="modal__text modal__text--hidden">Прибытие</div>
+            <div class="modal__text">18. 08. 2020</div>
+          </div>
+          <div class="modal__apartments-departure">
+            <div class="modal__text modal__text--hidden">Выезд</div>
+            <div class="modal__text">19. 09. 2020</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></a><br><a class="modal__flat" href="#">Добавить квартиру
+<div class="modal modal-flat">
+  <div class="modal__content">
+    <div class="modal__close"><img src="src/blocks/modal/assets/img/close.svg"></div>
+    <div class="modal__flat"><img class="modal__flat-img" src="src/blocks/modal/assets/img/apartment.png">
+      <div class="modal__header modal__header--flat">Добавить квартиру</div>
+      <div class="modal__flat-inner">
+        <div class="modal__address">
+          <div class="modal__label">Адрес квартиры</div>
+          <input class="modal__input" value="Генерала Ермолова ул, 12">
+        </div>
+        <div class="modal__flat-total">
+          <div class="modal__label">Итого:</div>
+          <div class="modal__input-box">
+            <div class="modal__wallet"><img src="src/blocks/modal/assets/img/wallet.svg"></div>
+            <input class="modal__input modal__input--mb-none modal__input--pl modal__input--background-focus" type="text" value="1 250 963  ">
+            <div class="modal__icon-rub"></div>
+          </div>
+        </div><a class="button" href="#">Сохранить</a>
+      </div>
+    </div>
+  </div>
+</div></a><br><a class="modal__consumption-show" href="#">Добавить расход
+<div class="modal modal--index modal-consumption">
+  <div class="modal__content">
+    <div class="modal__close"><img src="src/blocks/modal/assets/img/close.svg"></div>
+    <div class="modal__consumption">
+      <div class="modal__header">Добавить расход</div>
+      <div class="modal__consumption-inner">
+        <form>
+          <div class="modal__label">Названия расхода</div>
+          <input class="modal__input modal__input--padding js-valid-area" type="number" min="0,01" placeholder="Номер">
+          <div class="modal__label">Заложенной суммы</div>
+          <input class="modal__input modal__input--padding js-valid-area" type="number" min="0,01" placeholder="Номер">
+          <div class="modal__label">Израсходовано</div>
+          <input class="modal__input modal__input--padding js-valid-area" type="number" min="0,01" placeholder="Номер">
+          <div class="modal__label">Номер счёта</div>
+          <input class="modal__input modal__input--padding" type="text" min="0" placeholder="Номер" maxlength="50">
+          <div class="modal__label">Номер контрагента</div>
+          <input class="modal__input modal__input--padding" type="text" min="0" placeholder="Номер" maxlength="50">
+          <div class="modal__label">Номер номенклатуры</div>
+          <input class="modal__input modal__input--padding" type="text" min="0" placeholder="Номер" maxlength="50">
+          <div class="modal__label">Дата</div>
+          <input class="modal__input modal__input-date modal__input--padding js-date" type="text" min="0" placeholder="Дата" maxlength="50" id="todayInputDate">
+          <button class="button modal__btn-consumption">Добавить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div></a><br><a class="calendar__show" href="#">Редактировать яйчейку
+<div class="modal modal-calendar-cell">
+  <div class="modal__content">
+    <div class="modal__close"><img src="src/blocks/modal/assets/img/close.svg"></div>
+    <div class="modal__edit-table">
+      <div class="modal__header">Редактирование</div>
+      <div class="modal__editing-inner">
+        <div class="modal__editing-row">
+          <div class="modal__editing-item">
+            <div class="modal__editing-title">Количество часов</div>
+            <input class="modal__editing-input" type="text" value="10">
+          </div>
+          <!--.modal__editing-item-->
+          <!--    .modal__editing-title Название проекта-->
+          <!--    .modal__editing-box-->
+          <!--        select.modal__editing-select-->
+          <!--            option  Сварка-->
+          <!--            option  Свар32-->
+        </div>
+        <textarea class="modal__editing-area" placeholder="Комментарий"></textarea>
+        <div class="modal__editing-box"><a class="button modal__editing-btn" href="#">Сохранить</a></div>
+      </div>
+    </div>
+  </div>
+</div></a><br><a class="modal__show-comment" href="#">Показать комментарий
+<div class="modal modal-show-comment">
+  <div class="modal__content">
+    <div class="modal__close"><img src="src/blocks/modal/assets/img/close.svg"></div>
+    <div class="modal__edit-table">
+      <div class="modal__header">Комментарий:</div>
+      <div class="modal__editing-inner">
+        <div class="modal__comment-text">Комментарий текст 1 2 3 Комментарий текст 1 2 3Комментарий текст 1 2 3Комментарий текст 1 2 3Комментарий текст 1 2 3Комментарий текст 1 2 3Комментарий текст 1 2 3Комментарий текст 1 2 3Комментарий текст 1 2 3Комментарий текст 1 2 3Комментарий текст 1 2 3Комментарий текст 1 2 3</div>
+      </div>
+    </div>
+  </div>
+</div></a>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__rights">
+        <div class="footer__text">© 2020</div>
+      </div>
+      <div class="footer__nav"><a class="footer__link" href="#">Главная</a><a class="footer__link" href="#">Контракты</a><a class="footer__link" href="#">Персонал</a><a class="footer__link" href="#">Табель</a><a class="footer__link" href="#">Другое</a></div><a class="footer__support" href="#">
+        <div class="footer__support-icon"></div>Служба поддержки</a>
+    </div>
+  </div>
+</footer>
+  <script src="libs.js"></script><script src="main.js"></script><script src="style.js"></script></body>
+</html>

@@ -1,0 +1,67 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.modal-close{
+  display: none;
+  &::before{
+    content: "";
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    z-index: 60;
+    cursor: default;
+  }
+  &__inner{
+    width: 400px;
+    padding: 35px;
+    background: #fff;
+    border-radius: 5px;
+    position: fixed;
+    z-index: 90;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    @media #{$mobile-big-screen}{
+      padding: 25px;
+      width: calc(100vw - 40px);
+    }
+  }
+  &__title{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    color: #4B5561;
+    margin-bottom: 25px;
+    text-align: center;
+    @media #{$tablet-big-screen}{
+      font-size: 20px;
+    }
+    @media #{$tablet-small-screen}{
+      font-size: 18px;
+      line-height: 25px;
+    }
+    @media #{$mobile-big-screen}{
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+  }
+  &__buttons{
+    display: flex;
+    align-items: center;
+  }
+  &__button{
+    width: 50%;
+    margin-right: 20px;
+    &:last-child{
+      margin: 0;
+    }
+    @media #{$mobile-big-screen}{
+      margin-right: 10px;
+    }
+  }
+}

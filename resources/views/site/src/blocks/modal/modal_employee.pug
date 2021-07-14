@@ -1,0 +1,45 @@
+.modal.modal-employee
+    .modal__content
+        .modal__close
+            img(src="src/blocks/modal/assets/img/close.svg")
+        .modal__employee
+            .modal__employee-img-box
+                img(src="src/blocks/modal/assets/img/employee.png").modal__employee-img
+            .modal__header.modal__header--pr Добавить сотрудника
+            .modal__inner-content.modal__inner-content--height
+                .modal__label ФИО
+                input(type="text" value="Вимм Билль Данн").modal__input
+
+                .modal__position
+                    .modal__label Должность
+                    .modal__position-box
+                        select(value="Сварка").modal__position-select
+                            option Сварка
+                            option Сварка2
+                            option Сварка3
+
+                .modal__certification-block
+                    .modal__certification-item
+                        .modal__label Удостоверение
+                        .modal-inputfile
+                            label(for="myfile").choice
+                                .modal-inputfile__icon
+                                .modal-inputfile__text Загрузите удостоверение
+                            input(type="file" class="my" name="myfile" multiple)#myfile
+
+                    .modal__term
+                        .modal__label Срок Действия / Дата выдачи
+                        .modal__term-row
+                            input(type="text" value="12/11/2022").modal__input.modal__input--mb-none.modal__term-input.js-date
+                            input(type="text" value="12/11/2018").modal__input.modal__input--mb-none.modal__term-input.js-date
+
+                .modal__employee-rate
+                    .modal__total
+                        .modal__label Ставка
+                        .modal__input-box
+                            .modal__wallet
+                                img(src="src/blocks/modal/assets/img/wallet.svg")
+                            input(type="text" value="400").modal__input.modal__input--mb-none.modal__input--pl.modal__input--background-focus
+                            .modal__icon-rub
+
+                a(href="#").button.modal__save-edit Сохранить

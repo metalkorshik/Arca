@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персонал</title>
+  <link href="libs.css" rel="stylesheet"><link href="style.css" rel="stylesheet"></head>
+  <body>
+<header class="header">
+  <div class="container">
+    <div class="header__inner"><a class="header__logo" href="#"><img class="logo" src="src/blocks/logo/assets/img/logo.svg"></a>
+      <nav class="header__nav">
+        <div class="header__links"><a class="header__link header__link--active" href="#">
+            <div class="header__link-icon"><img src="src/blocks/header/assets/img/home.svg"></div>Главная</a><a class="header__link" href="#">
+            <div class="header__link-icon"><img src="src/blocks/header/assets/img/word.svg"></div>Контракты</a><a class="header__link" href="#">
+            <div class="header__link-icon"><img src="src/blocks/header/assets/img/personal.svg"></div>Персонал</a><a class="header__link" href="#">
+            <div class="header__link-icon"><img src="src/blocks/header/assets/img/tab.svg"></div>Табель</a><a class="header__link" href="#">
+            <div class="header__link-icon"><img src="src/blocks/header/assets/img/dots.svg"></div>Квартиры</a></div>
+      </nav>
+      <div class="header__user">
+        <div class="header__user-info"><a class="header__name" href="#">Имя Фамилия</a>
+          <div class="header__position">Суперадмин</div>
+        </div><a class="header__user-img" href="#"><img class="header__user-photo" src="src/blocks/header/assets/img/user.png"></a>
+        <div class="header__menu-container"><a class="header__menu" href="#"></a>
+          <div class="header__menu-list"><a class="header__link header__link--active" href="#">
+              <div class="header__link-icon"><img src="src/blocks/header/assets/img/home.svg"></div>Главная</a><a class="header__link" href="#">
+              <div class="header__link-icon"><img src="src/blocks/header/assets/img/word.svg"></div>Контракты</a><a class="header__link" href="#">
+              <div class="header__link-icon"><img src="src/blocks/header/assets/img/personal.svg"></div>Персонал</a><a class="header__link" href="#">
+              <div class="header__link-icon"><img src="src/blocks/header/assets/img/tab.svg"></div>Табель</a><a class="header__link" href="#">
+              <div class="header__link-icon"><img src="src/blocks/header/assets/img/dots.svg"></div>Квартиры</a></div>
+        </div>
+        <div class="header__notification-box">
+          <div class="header__notification-icon"></div>
+          <div class="header__notification">1</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="user-panel">
+  <div class="container">
+    <div class="user-panel__inner">
+      <div class="user-panel__choice">
+        <div class="user-panel__title">Персонал</div>
+      </div>
+      <div class="user-panel__selected">
+        <div class="user-panel__select-box user-panel__select-box--mr">
+          <div class="user-panel__output-label">Выводить по:</div>
+          <div class="user-panel__sort-box user-panel__sort-box-page">
+            <select class="user-panel__sort user-panel__sort-page">
+              <option>10</option>
+              <option>20</option>
+              <option>50</option>
+              <option>Все</option>
+            </select>
+          </div>
+        </div>
+        <!--.user-panel__output.user-panel__output--mr
+        //.user-panel__dates-box.user-panel__dates-box--mr.user-panel__dates-start
+        //    .user-panel__output-label От:
+        //    select.js-user-dates-start
+        //        option 20.01.2020
+        //        option 20.01.2019
+        //
+        //
+        //.user-panel__dates-box.user-panel__dates-box--mr.user-panel__dates-end
+        //    .user-panel__output-label До:
+        //    select.js-user-dates-end
+        //        option 20.08.2020
+        //        option 20.01.2019
+        
+        -->
+        <div class="user-panel__select-box">
+          <div class="user-panel__output-label">ФИО:</div>
+          <div class="user-panel__input-box user-panel__input-box--search-small">
+            <input class="user-panel__input" type="text" placeholder="Фамилия">
+            <div class="user-panel__input-icon"><img src="src/blocks/user-panel/assets/img/search.svg"></div>
+          </div>
+          <div class="user-panel__input-box user-panel__input-box--search-small">
+            <input class="user-panel__input" type="text" placeholder="Имя">
+            <div class="user-panel__input-icon"><img src="src/blocks/user-panel/assets/img/search.svg"></div>
+          </div>
+          <div class="user-panel__input-box user-panel__input-box--search-small">
+            <input class="user-panel__input" type="text" placeholder="Отчество">
+            <div class="user-panel__input-icon"><img src="src/blocks/user-panel/assets/img/search.svg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="user-panel__panel-container">
+      <div class="user-panel__select-box user-panel__select-box--mr">
+        <div class="user-panel__output-label">Ставка:</div>
+        <div class="user-panel__input-box user-panel__input-box--search-rate">
+          <input class="user-panel__input" type="number" placeholder="от" min="0" oninput="validity.valid||(value='');">
+          <div class="user-panel__input-icon"><img src="src/blocks/user-panel/assets/img/search.svg"></div>
+        </div>
+        <div class="user-panel__input-box user-panel__input-box--search-rate">
+          <input class="user-panel__input" type="number" placeholder="до" min="0" oninput="validity.valid||(value='');">
+          <div class="user-panel__input-icon"><img src="src/blocks/user-panel/assets/img/search.svg"></div>
+        </div>
+      </div>
+      <div class="user-panel__select-box">
+        <div class="user-panel__output-label">Должность</div>
+        <div class="user-panel__select user-panel__sort-box">
+          <select class="js-user-position">
+            <option>Должность 1</option>
+            <option>Должность 2</option>
+            <option>Должность 3</option>
+          </select>
+        </div>
+      </div>
+      <button class="button user-panel__search">Поиск</button>
+    </div>
+  </div>
+</div>
+<div class="contracts">
+  <div class="container">
+    <div class="contracts__header">
+      <div class="contracts__panel"><a class="contracts__remove" href="#">
+          <div class="contracts__remove-icon"></div>Удалить</a></div>
+      <div class="button contracts__button">Добавить сотрудника
+        <div class="contracts__button-icon"><img src="src/blocks/contracts/assets/img/person.svg"></div>
+      </div>
+    </div>
+    <div class="contracts__wrapper">
+      <div class="contracts__block">
+        <div class="contracts__named contracts__named--staff">
+          <div class="contracts__fullname">
+            <div class="contracts__overhead">ФИО</div>
+          </div>
+          <div class="contracts__position">
+            <div class="contracts__overhead">Должность</div>
+          </div>
+          <div class="contracts__rate">
+            <div class="contracts__overhead">Ставка</div>
+          </div>
+        </div>
+        <div class="contracts__row">
+          <div class="contracts__checkbox contracts__checkbox-table">
+            <input class="contracts__input" type="checkbox">
+            <div class="contracts__square"></div>
+          </div>
+          <div class="contracts__edit"></div>
+          <div class="contracts__fullname">
+            <div class="contracts__text">Шахбазян Денис Арменович</div>
+          </div>
+          <div class="contracts__position">
+            <div class="contracts__text">Монтажник</div>
+          </div>
+          <div class="contracts__rate">
+            <div class="contracts__text">320</div>
+          </div>
+        </div>
+        <div class="contracts__row contracts__row--grey contracts__row--active">
+          <div class="contracts__checkbox contracts__checkbox-table">
+            <input class="contracts__input" type="checkbox" checked>
+            <div class="contracts__square"></div>
+          </div>
+          <div class="contracts__edit"></div>
+          <div class="contracts__fullname">
+            <div class="contracts__text">Иванов Иван Иванович</div>
+          </div>
+          <div class="contracts__position">
+            <div class="contracts__text">Монтажник</div>
+          </div>
+          <div class="contracts__rate">
+            <div class="contracts__text">320</div>
+          </div>
+        </div>
+        <div class="contracts__row">
+          <div class="contracts__checkbox contracts__checkbox-table">
+            <input class="contracts__input" type="checkbox">
+            <div class="contracts__square"></div>
+          </div>
+          <div class="contracts__edit"></div>
+          <div class="contracts__fullname">
+            <div class="contracts__text">Петров Андрей Владимирович</div>
+          </div>
+          <div class="contracts__position">
+            <div class="contracts__text">Бухгалтер</div>
+          </div>
+          <div class="contracts__rate">
+            <div class="contracts__text">400</div>
+          </div>
+        </div>
+        <div class="contracts__row contracts__row--grey">
+          <div class="contracts__checkbox contracts__checkbox-table">
+            <input class="contracts__input" type="checkbox">
+            <div class="contracts__square"></div>
+          </div>
+          <div class="contracts__edit"></div>
+          <div class="contracts__fullname">
+            <div class="contracts__text">Петров Андрей Владимирович</div>
+          </div>
+          <div class="contracts__position">
+            <div class="contracts__text">Бухгалтер</div>
+          </div>
+          <div class="contracts__rate">
+            <div class="contracts__text">400</div>
+          </div>
+        </div>
+        <div class="contracts__row">
+          <div class="contracts__checkbox contracts__checkbox-table">
+            <input class="contracts__input" type="checkbox">
+            <div class="contracts__square"></div>
+          </div>
+          <div class="contracts__edit"></div>
+          <div class="contracts__fullname">
+            <div class="contracts__text">Петров Андрей Владимирович</div>
+          </div>
+          <div class="contracts__position">
+            <div class="contracts__text">Бухгалтер</div>
+          </div>
+          <div class="contracts__rate">
+            <div class="contracts__text">400</div>
+          </div>
+        </div>
+        <div class="contracts__row contracts__row--grey">
+          <div class="contracts__checkbox contracts__checkbox-table">
+            <input class="contracts__input" type="checkbox">
+            <div class="contracts__square"></div>
+          </div>
+          <div class="contracts__edit"></div>
+          <div class="contracts__fullname">
+            <div class="contracts__text">Петров Андрей Владимирович</div>
+          </div>
+          <div class="contracts__position">
+            <div class="contracts__text">Бухгалтер</div>
+          </div>
+          <div class="contracts__rate">
+            <div class="contracts__text">400</div>
+          </div>
+        </div>
+        <div class="contracts__row">
+          <div class="contracts__checkbox contracts__checkbox-table">
+            <input class="contracts__input" type="checkbox">
+            <div class="contracts__square"></div>
+          </div>
+          <div class="contracts__edit"></div>
+          <div class="contracts__fullname">
+            <div class="contracts__text">Петров Андрей Владимирович</div>
+          </div>
+          <div class="contracts__position">
+            <div class="contracts__text">Бухгалтер</div>
+          </div>
+          <div class="contracts__rate">
+            <div class="contracts__text">400</div>
+          </div>
+        </div>
+        <div class="contracts__row contracts__row--grey">
+          <div class="contracts__checkbox contracts__checkbox-table">
+            <input class="contracts__input" type="checkbox">
+            <div class="contracts__square"></div>
+          </div>
+          <div class="contracts__edit"></div>
+          <div class="contracts__fullname">
+            <div class="contracts__text">Шахбазян Денис Арменович</div>
+          </div>
+          <div class="contracts__position">
+            <div class="contracts__text">Генеральный директор</div>
+          </div>
+          <div class="contracts__rate">
+            <div class="contracts__text">1500</div>
+          </div>
+        </div>
+        <div class="contracts__row">
+          <div class="contracts__checkbox contracts__checkbox-table">
+            <input class="contracts__input" type="checkbox">
+            <div class="contracts__square"></div>
+          </div>
+          <div class="contracts__edit"></div>
+          <div class="contracts__fullname">
+            <div class="contracts__text">Петров Андрей Владимирович</div>
+          </div>
+          <div class="contracts__position">
+            <div class="contracts__text">Сварщик</div>
+          </div>
+          <div class="contracts__rate">
+            <div class="contracts__text">400</div>
+          </div>
+        </div>
+        <div class="contracts__row contracts__row--grey">
+          <div class="contracts__checkbox contracts__checkbox-table">
+            <input class="contracts__input" type="checkbox">
+            <div class="contracts__square"></div>
+          </div>
+          <div class="contracts__edit"></div>
+          <div class="contracts__fullname">
+            <div class="contracts__text">Горохов Вадим Дмитриевич</div>
+          </div>
+          <div class="contracts__position">
+            <div class="contracts__text">Сварщик</div>
+          </div>
+          <div class="contracts__rate">
+            <div class="contracts__text">400</div>
+          </div>
+        </div>
+      </div>
+    </div><a class="button button__more contracts__button-more" href="#">Показать еще 10</a>
+<div class="pagination"><a class="pagination__link pagination__link--active" href="#">1</a><a class="pagination__link" href="#">2</a><a class="pagination__link" href="#">3</a><a class="pagination__link" href="#">4</a><a class="pagination__link" href="#">5</a><a class="pagination__link" href="#">6</a><a class="pagination__link" href="#">7</a><a class="pagination__link" href="#">8</a><a class="pagination__link" href="#">. . .</a><a class="pagination__link" href="#">11</a></div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__rights">
+        <div class="footer__text">© 2020</div>
+      </div>
+      <div class="footer__nav"><a class="footer__link" href="#">Главная</a><a class="footer__link" href="#">Контракты</a><a class="footer__link" href="#">Персонал</a><a class="footer__link" href="#">Табель</a><a class="footer__link" href="#">Другое</a></div><a class="footer__support" href="#">
+        <div class="footer__support-icon"></div>Служба поддержки</a>
+    </div>
+  </div>
+</footer>
+  <script src="libs.js"></script><script src="main.js"></script><script src="style.js"></script></body>
+</html>

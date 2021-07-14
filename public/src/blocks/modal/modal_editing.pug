@@ -1,0 +1,22 @@
+.modal.modal-editing
+    .modal__content
+        .modal__close
+            img(src="src/blocks/modal/assets/img/close.svg")
+        .modal__edit-table
+            .modal__header Редактирование
+            .modal__editing-inner
+                .modal__editing-row
+                    .modal__editing-item
+                        .modal__editing-title Количество часов
+                        input(type="text" value="10").modal__editing-input
+                    .modal__editing-item
+                        .modal__editing-title Название проекта
+                        .modal__editing-box
+                            select.modal__editing-select
+                                option  Сварка
+                                option  Свар32
+                textarea(placeholder="Комментарий").modal__editing-area
+
+
+                .modal__editing-box
+                    a(href="#").button.modal__editing-btn Сохранить

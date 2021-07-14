@@ -1,0 +1,70 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.button{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: #4BA0EA;
+  border-radius: 5px;
+  height: 44px;
+  @include flex-row-center;
+  font-weight: 600;
+  font-size: 16px;
+  color: $white;
+  transition: .2s;
+  padding: 0 19px 0 15px;
+  &:hover{
+    background: #4799e2;
+  }
+  &--grey{
+    color: #000;
+    background: #eeeeee;
+    &:hover{
+      background: #dedede;
+    }
+  }
+  &--orange{
+    color: #fff;
+    background: #f8972d;
+    &:hover{
+      background: #e98c27;
+    }
+  }
+  @media #{$mobile-big-screen}{
+    height: 38px;
+    font-size: 14px;
+  }
+  &__more{
+    background: #DDE9F7;
+    color: #4B5561;
+    font-weight: 600;
+    font-size: 14px;
+    height: 50px;
+    text-decoration: underline;
+    &:hover{
+      background: #d1e3f8;
+    }
+    @media #{$mobile-big-screen}{
+      height: 40px;
+      font-size: 12px;
+    }
+  }
+  &__add-icon{
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+    background: $white;
+    margin-left: 10px;
+  }
+  &--width{
+    width: 100%;
+  }
+  &--light{
+    background: #81bef5;
+    &:hover{
+      background: #60a8e7;
+    }
+  }
+}

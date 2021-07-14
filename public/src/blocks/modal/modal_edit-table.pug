@@ -1,0 +1,26 @@
+.modal.modal-edit-table
+    .modal__content
+        .modal__close
+            img(src="src/blocks/modal/assets/img/close.svg")
+        .modal__edit-table
+            .modal__header Редактирование таблицы
+            .modal__inner-content
+                .modal__label 1 столбец
+                .modal__input-col
+                    input(type="text" value="ФИО").modal__input.modal__input--indent-col
+                    .modal__col-icon
+                .modal__label 2 столбец
+                .modal__input-col
+                    input(type="text" value="Должность").modal__input.modal__input--indent-col
+                    .modal__col-icon
+                .modal__label 3 столбец
+                .modal__input-col
+                    input(type="text" value="Ставка").modal__input.modal__input--indent-col
+                    .modal__col-icon
+
+                a(href="#").modal__add-col
+                    | Добавить столбец
+                    .modal__add-icon
+                        img(src="src/blocks/modal/assets/img/plus.svg")
+
+                a(href="#").button Сохранить

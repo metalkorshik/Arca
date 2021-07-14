@@ -1,0 +1,110 @@
+.commercial-offer
+    .container
+        .commercial-offer__inner
+            .commercial-offer__container
+                .commercial-offer__item
+                    .commercial-offer__label Название проекта
+                    input(type="text" maxlength="50").commercial-offer__input
+                .commercial-offer__item
+                    .commercial-offer__label Номер предложения
+                    input(type="text" placeholder='' ).commercial-offer__input.js-input-number
+            .commercial-offer__container
+                .commercial-offer__item
+                    .commercial-offer__label.commercial-offer__label--necessarily ФИО заказчика
+                    input(type="text" maxlength="50").commercial-offer__input
+                .commercial-offer__item
+                    .commercial-offer__label Номер заказчика
+                    input(type="text" ).commercial-offer__input.js-phone
+            .commercial-offer__container
+                .commercial-offer__item
+                    .commercial-offer__label.commercial-offer__label--necessarily Дата
+                    input(type="text").commercial-offer__input.js-date
+                .commercial-offer__item
+                    .commercial-offer__label.commercial-offer__label--necessarily ФИО ответственного
+                    .select-style
+                        select.js-select-fio
+                            option ФИО 1
+            .commercial-offer__container
+                .commercial-offer__item
+                    .commercial-offer__label Список расходов
+                    .commercial-offer__tab-block
+                        .commercial-offer__tab
+                            .commercial-offer__tab-head
+                                .commercial-offer__col
+                                    .commercial-offer__text Название
+                                .commercial-offer__col
+                                    .commercial-offer__text Сумма
+
+                            .commercial-offer__row
+                                .commercial-offer__col
+                                    input(type="text" value="Название2" maxlength="50").commercial-offer__text
+                                .commercial-offer__col
+                                    input(type="number" value="1110" maxlength="50").commercial-offer__text
+                                .commercial-offer__remove-box
+                                    .commercial-offer__remove
+                                    | Удалить
+
+
+                            .commercial-offer__row
+                                .commercial-offer__col
+                                    input(type="text" value="Название2" maxlength="50").commercial-offer__text
+                                .commercial-offer__col
+                                    input(type="number" value="1110" maxlength="50").commercial-offer__text
+                                .commercial-offer__remove-box
+                                    .commercial-offer__remove
+                                    | Удалить
+                            .commercial-offer__row
+                                .commercial-offer__col
+                                    input(type="text" value="Название2" maxlength="50").commercial-offer__text
+                                .commercial-offer__col
+                                    input(type="number" value="1110" maxlength="50").commercial-offer__text
+                                .commercial-offer__remove-box
+                                    .commercial-offer__remove
+                                    | Удалить
+                    a(href="#").button.commercial-offer__tab-btn.js-add-row Добавить расход
+            .commercial-offer__container
+                .commercial-offer__item
+                    .commercial-offer__label Комментарий
+                    textarea.commercial-offer__textarea
+            .commercial-offer__container
+                .commercial-offer__item
+                    .commercial-offer__label Прикрепить файлы
+                    .commercial-offer__file
+                        input(type="file" multiple onchange="javascript:updateList()").commercial-offer__file-input#file
+                        .commercial-offer__file-icon
+                        | Выберите файлы
+
+                    .commercial-offer__files#fileList
+
+
+            .commercial-offer__container
+                .commercial-offer__item
+                    .commercial-offer__label Назначить сотрудника на контракт
+                    .commercial-offer__selector
+                        .commercial-offer__named  Инженер
+                        select.js-select-engineer
+                            option Инженер
+                            option Инженер2
+                            option Инженер3
+                            option Инженер3
+                        .commercial-offer__named  Проектировщик
+                        select.js-select-designer
+                            option Проектировщик
+                            option Проектировщик2
+                            option Проектировщик3
+                        .commercial-offer__named  Рабочий персонал
+                        select(name="states[]" multiple="multiple").js-select-personal
+                            option Рабочий персонал
+                            option Рабочий персонал
+                            option Рабочий персонал
+                            option Рабочий персонал
+            a(href="#").button.commercial-offer__btn Сохранить
+
+
+    .modal-remove-box
+        .modal-overlay
+        .modal-remove
+            .modal-remove__text Удалить выбранный файл?
+            .modal-remove__buttons
+                .button.modal-remove__button.js-file-accept Подтвердить
+                .button.button--light.modal-remove__button.js-file-close Отменить

@@ -1,0 +1,295 @@
+.modal.modal-contract
+    .modal__content
+        .modal__contract
+            .modal__close
+                img(src="src/blocks/modal/assets/img/close.svg")
+            .modal__title.modal__title--mb-small Название проекта
+            .modal__text №1235789123
+            .modal__contract-panel
+                .modal__expenses-today
+                    .modal__label.modal__label--small Расходы на сегодня
+                    input(type="text" value="100 000 руб.").modal__input.modal__input--big-text
+                .modal__expenses-container
+                    .modal__label.modal__label--small Расходы на дату
+
+                    .modal__expenses-inner
+                        input(type="text").modal__expenses-date.js-date
+                        input(type="text").modal__expenses-date.js-date
+                        button.modal__btn-search
+                            .modal__search-icon
+            .modal__contract-table
+                .modal__table-inner
+                    .modal__contract-header
+                        .modal__contract-name
+                            .modal__label.modal__label--small.modal__label--mb-none Наименования
+                        .modal__contract-contribution
+                            .modal__label.modal__label--small.modal__label--mb-none Заложено
+                        .modal__contract-consumption
+                            .modal__label.modal__label--small.modal__label--mb-none Израсходованно
+                    .modal__contract-row
+                        .modal__contract-name
+                            .modal__text Монтажный материал
+                        .modal__contract-contribution
+                            .modal__text.modal__text--blue 90 000 руб.
+                        .modal__contract-consumption
+                            .modal__text.modal__text--blue 0 руб.
+                        button.modal__edited
+                    .modal__contract-row
+                        .modal__contract-name
+                            .modal__text Электромонтажный материал
+                        .modal__contract-contribution
+                            .modal__text.modal__text--blue 900 руб.
+                        .modal__contract-consumption
+                            .modal__text.modal__text--blue 0 руб.
+                        button.modal__edited
+                    .modal__contract-row
+                        .modal__contract-name
+                            .modal__text Стоимость оборудования
+                        .modal__contract-contribution
+                            .modal__text.modal__text--blue 4500 руб.
+                        .modal__contract-consumption
+                            .modal__text.modal__text--blue 0 руб.
+                        button.modal__edited
+                    .modal__contract-row
+                        .modal__contract-name
+                            .modal__text Аренда техники
+                        .modal__contract-contribution
+                            .modal__text.modal__text--blue 4500 руб.
+                        .modal__contract-consumption
+                            .modal__text.modal__text--blue 0 руб.
+                        button.modal__edited
+                    .modal__contract-row
+                        .modal__contract-name
+                            .modal__text Стоимость проектных работ
+                        .modal__contract-contribution
+                            .modal__text.modal__text--blue 0 руб.
+                        .modal__contract-consumption
+                            .modal__text.modal__text--blue 0 руб.
+                        button.modal__edited
+                    .modal__contract-row
+                        .modal__contract-name
+                            .modal__text Стоимость монтажных работ
+                        .modal__contract-contribution
+                            .modal__text.modal__text--blue 0 руб.
+                        .modal__contract-consumption
+                            .modal__text.modal__text--blue 0 руб.
+                        button.modal__edited
+                    .modal__contract-row
+                        .modal__contract-name
+                            .modal__text Стоимость электромонтажных работ
+                        .modal__contract-contribution
+                            .modal__text.modal__text--blue 0 руб.
+                        .modal__contract-consumption
+                            .modal__text.modal__text--blue 0 руб.
+                        button.modal__edited
+                    .modal__contract-row
+                        .modal__contract-name
+                            .modal__text Мобилизационные затраты
+                        .modal__contract-contribution
+                            .modal__text.modal__text--blue 0 руб.
+                        .modal__contract-consumption
+                            .modal__text.modal__text--blue 0 руб.
+                        button.modal__edited
+                    .modal__contract-row
+                        .modal__contract-name
+                            .modal__text Мобилизационные затраты
+                        .modal__contract-contribution
+                            .modal__text.modal__text--blue 1000 руб.
+                        .modal__contract-consumption
+                            .modal__text.modal__text--blue 1000 руб.
+                        button.modal__edited
+
+            button.button.modal__add-consumption.modal__consumption-show Добавить расход
+
+
+
+            .modal__table-footer
+                .modal__contract-total
+                    .modal__label Всего
+                    .modal__sum 1000 руб.
+                a(href="#").modal__project-btn.modal__close-return Закрыть проект
+
+            .files
+                .files__header
+                    .files__title Файлы
+                    .files__file-icon
+                .files__nav
+                    button.files__button
+                        input.files__download(type="file" onchange="javascript:downloadFiles()")#downloadFiles
+                        .files__button-icon.files__button-icon--cloud
+                        | Загрузка
+                    button.files__button.js-btn-create-folder
+                        .files__button-icon.files__button-icon--folder
+                        | Создать папку
+                    button.files__button
+                        .files__button-icon.files__button-icon--update
+                    button.files__button.js-btn-transfer
+                        .files__button-icon.files__button-icon--move
+                        | Переместить
+                    button.files__button.js-btn-modal-remove
+                        .files__button-icon.files__button-icon--remove
+                        | Удалить
+                .files__inner
+                    .files__container#filesOutput
+                        .files__item
+                            .files__type-icon.files__type-icon--document
+                            .files__named
+                                .files__name news-document.pdf
+                                .files__size 3 mb
+                        .files__item
+                            .files__type-icon.files__type-icon--folder
+                            .files__named
+                                .files__name test folder
+                        .files__item
+                            .files__type-icon.files__type-icon--folder
+                            .files__named
+                                .files__name test folder 2
+
+                    .files__info-block#outputInformation
+
+                        .files__info
+                            .files__info-close
+                            .files__info-image
+                                .files__info-type.files__info-type--document
+                            .files__info-inner
+                                .files__label Название:
+                                input(type="text" value="news-document.pdf" placeholder="Название").input-styled.files__input-name
+                                .files__info-row
+                                    .files__label Тип:
+                                    .files__info-text.files__info-text--ml news-document.pdf
+                                .files__info-row
+                                    .files__label Размер:
+                                    .files__info-text.files__info-text--ml 3 MB
+                                .files__info-row
+                                    .files__label Ссылка:
+                                    a(href="#").files__link Кликните тут
+                                .files__info-row.files__info-row--direction
+                                    .files__label Последнее изменение:
+                                    .files__info-text.files__info-text--mt 29/10/2020
+
+
+                        .files__info
+                            .files__info-close
+                            .files__info-image
+                                .files__info-type.files__info-type--document
+                            .files__info-inner
+                                .files__label Название:
+                                input(type="text" value="news-document.pdf" placeholder="Название").input-styled.files__input-name
+                                .files__info-row
+                                    .files__label Тип:
+                                    .files__info-text.files__info-text--ml news-document.pdf
+                                .files__info-row
+                                    .files__label Размер:
+                                    .files__info-text.files__info-text--ml 3 MB
+                                .files__info-row
+                                    .files__label Ссылка:
+                                    a(href="#").files__link Кликните тут
+                                .files__info-row.files__info-row--direction
+                                    .files__label Последнее изменение:
+                                    .files__info-text.files__info-text--mt 29/10/2020
+                        .files__info
+                            .files__info-close
+                            .files__info-image
+                                .files__info-type.files__info-type--document
+                            .files__info-inner
+                                .files__label Название:
+                                input(type="text" value="news-document.pdf" placeholder="Название").input-styled.files__input-name
+                                .files__info-row
+                                    .files__label Тип:
+                                    .files__info-text.files__info-text--ml news-document.pdf
+                                .files__info-row
+                                    .files__label Размер:
+                                    .files__info-text.files__info-text--ml 3 MB
+                                .files__info-row
+                                    .files__label Ссылка:
+                                    a(href="#").files__link Кликните тут
+                                .files__info-row.files__info-row--direction
+                                    .files__label Последнее изменение:
+                                    .files__info-text.files__info-text--mt 29/10/2020
+
+
+            .files-modal.js-create-folder
+                .overlay
+                .files-modal__box
+                    .files-modal__overtitle
+                        .files-modal__overtitle-icon.files-modal__overtitle-icon--folder
+                        .files-modal__overtitle-title Добавить новую папку
+                        .files-modal__close
+                    .files-modal__modal-inner
+                        input(type="text" placeholder="Новое имя папки").files-modal__modal-input#nameFolder
+                        .files-modal__modal-nav
+                            button.button.button--grey.files-modal__modal-button.js-modal-cancel Отмена
+                            button.button.files-modal__modal-button.js-btn-folder Создать новую папку
+
+            .files-modal.js-file-transfer
+                .overlay
+                .files-modal__box
+                    .files-modal__overtitle.files-modal__overtitle--orange
+                        .files-modal__overtitle-icon.files-modal__overtitle-icon--transfer
+                        .files-modal__overtitle-title Переместить файл/папку
+                        .files-modal__close
+                    .files-modal__modal-inner
+                        .files-modal__select-box
+                            select.files-modal__select
+                                option(disabled selected) Папка назначения
+                                option 1234
+                                option 12345
+                        .files-modal__modal-nav
+                            button.button.button--grey.files-modal__modal-button.js-modal-cancel Отмена
+                            button.button.button--orange.files-modal__modal-button.js-transfer-file Переместить
+
+            .files-modal.js-modal-remove
+                .overlay
+                    .files-modal__box
+                        .files-modal__overtitle
+                            .files-modal__overtitle-icon.files-modal__overtitle-icon--remove
+                            .files-modal__overtitle-title Удаление файла
+                            .files-modal__close
+                        .files-modal__modal-inner
+                            .files-modal__text Вы действительно хотите удалить файл?
+                            .files-modal__buttons
+                                .button.files-modal__btn.js-btn-remove Да
+                                .button.files-modal__btn.js-modal-cancel Нет
+
+
+
+            .modal__title.modal__title--thin Примечание
+            .modal__comments#comments
+                .modal__comment
+                    .modal__comment-info
+                        .modal__text.modal__comment-name Вимм Билль Данн
+                        .modal__text.modal__text--mr 18.01.2020г
+                        .modal__text 12:22
+                    .modal__text Тут многострочный текст, который может оставлять каждый пользователь. По типу комментариев ВК
+                    button.button.modal__reply Ответить
+                .modal__comment.modal__comment--right
+                    .modal__comment-info
+                        .modal__text.modal__comment-name Вимм Билль Данн
+                        .modal__text.modal__text--mr 18.01.2020г
+                        .modal__text 12:22
+                    .modal__text Тут многострочный текст, который может оставлять каждый пользователь. По типу комментариев ВК
+                    button.button.modal__reply Ответить
+                .modal__comment.modal__comment--right
+                    .modal__comment-info
+                        .modal__text.modal__comment-name Вимм Билль Данн
+                        .modal__text.modal__text--mr 18.01.2020г
+                        .modal__text 12:22
+                    .modal__text Тут многострочный текст, который может оставлять каждый пользователь. По типу комментариев ВК
+                    button.button.modal__reply Ответить
+                .modal__comment
+                    .modal__comment-info
+                        .modal__text.modal__comment-name Вимм Билль Данн
+                        .modal__text.modal__text--mr 18.01.2020г
+                        .modal__text 12:22
+                    .modal__text Тут многострочный текст, который может оставлять каждый пользователь. По типу комментариев ВК
+                    button.button.modal__reply Ответить
+            textarea(placeholder="Введите комментарий").modal__textarea-comment#textMessage
+            .modal__request-box
+                a(href='#').button.modal__request-btn Оставить заметку
+
+.modal-close
+    .modal-close__inner
+        .modal-close__title Вы точно уверены что хотите закрыть проект?
+        .modal-close__buttons
+            a(href="#").button.modal-close__button.js-modal-yes Да
+            a(href="#").button.modal-close__button.js-modal-no Нет

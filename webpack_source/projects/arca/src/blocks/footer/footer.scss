@@ -1,0 +1,87 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.footer{
+  padding: 25px 0;
+  background: #F2F7FC;
+  @media #{$mobile-big-screen}{
+    padding: 10px 0;
+  }
+  &__inner{
+    display: flex;
+    @media #{$mobile-big-screen}{
+      flex-direction: column;
+    }
+  }
+  &__text{
+    font-size: 14px;
+    line-height: 19px;
+    color: #4B5561;
+    @media #{$mobile-small-screen}{
+      font-size: 12px;
+    }
+  }
+  &__rights{
+    flex-shrink: 0;
+    margin-right: 89px;
+    @media #{$tablet-small-screen}{
+      margin-right: 40px;
+    }
+    @media #{$mobile-big-screen}{
+      margin: 0 0 10px 0;
+    }
+  }
+  &__nav{
+    display: flex;
+    @media #{$mobile-big-screen}{
+      margin: 0 0 10px 0;
+    }
+  }
+  &__link{
+    margin-right: 25px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #4B5561;
+    transition: .2s;
+    &:last-child{
+      margin-right: 0;
+    }
+    &:hover{
+      color: #061058;
+    }
+    @media #{$mobile-small-screen}{
+      margin: 0 10px 0 0;
+      font-size: 12px;
+    }
+  }
+  &__support{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+    line-height: 19px;
+    color: #4B5561;
+    transition: .2s;
+    &:hover{
+      color: #061058;
+      .footer__support-icon{
+        background: #061058;
+      }
+    }
+    @media #{$mobile-small-screen}{
+      font-size: 12px;
+    }
+  }
+  &__support-icon{
+    transition: .2s;
+    width: 16px;
+    height: 16px;
+    background: #262F56;
+    @include mask-contain-center;
+    margin-right: 6px;
+    mask: url(/src/blocks/header/assets/img/support.svg);
+    -webkit-mask: url(/src/blocks/header/assets/img/support.svg);
+  }
+}

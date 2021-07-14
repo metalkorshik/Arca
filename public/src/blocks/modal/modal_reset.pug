@@ -1,0 +1,15 @@
+.modal.modal-reset
+    .modal__content
+        .modal__inner
+            .modal__close
+                img(src="src/blocks/modal/assets/img/close.svg")
+            .modal__sign-in
+                .modal__logo
+                    include ../logo/logo
+                .modal__sign-in-container
+                    .modal__title Восстановление пароля
+                    form
+                        .modal__form-inner
+                            .modal__label.modal__label--mb Введите email  (мы отправим письмо с подтверждением)
+                            input(type="email   ").modal__input
+                        button.button.button--width.modal__button Восстановить пароль

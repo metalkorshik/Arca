@@ -1,0 +1,60 @@
+header.header
+    .container
+        .header__inner
+            a(href="#").header__logo
+                include ../../blocks/logo/logo
+            nav.header__nav
+                .header__links
+                    a(href="#").header__link.header__link--active
+                        .header__link-icon
+                            img(src="src/blocks/header/assets/img/home.svg")
+                        | Главная
+                    a(href="#").header__link
+                        .header__link-icon
+                            img(src="src/blocks/header/assets/img/word.svg")
+                        | Контракты
+                    a(href="#").header__link
+                        .header__link-icon
+                            img(src="src/blocks/header/assets/img/personal.svg")
+                        | Персонал
+                    a(href="#").header__link
+                        .header__link-icon
+                            img(src="src/blocks/header/assets/img/tab.svg")
+                        | Табель
+                    a(href="#").header__link
+                        .header__link-icon
+                            img(src="src/blocks/header/assets/img/dots.svg")
+                        | Квартиры
+            .header__user
+                .header__user-info
+                    a(href="#").header__name Имя Фамилия
+                    .header__position Суперадмин
+                a(href="#").header__user-img
+                    img(src="src/blocks/header/assets/img/user.png").header__user-photo
+
+                .header__menu-container
+                    a(href='#').header__menu
+                    .header__menu-list
+                        a(href="#").header__link.header__link--active
+                            .header__link-icon
+                                img(src="src/blocks/header/assets/img/home.svg")
+                            | Главная
+                        a(href="#").header__link
+                            .header__link-icon
+                                img(src="src/blocks/header/assets/img/word.svg")
+                            | Контракты
+                        a(href="#").header__link
+                            .header__link-icon
+                                img(src="src/blocks/header/assets/img/personal.svg")
+                            | Персонал
+                        a(href="#").header__link
+                            .header__link-icon
+                                img(src="src/blocks/header/assets/img/tab.svg")
+                            | Табель
+                        a(href="#").header__link
+                            .header__link-icon
+                                img(src="src/blocks/header/assets/img/dots.svg")
+                            | Квартиры
+                .header__notification-box
+                    .header__notification-icon
+                    .header__notification 1
